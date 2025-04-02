@@ -1,0 +1,56 @@
+\doxysection{Board\+Square Class Reference}
+\hypertarget{class_board_square}{}\label{class_board_square}\index{BoardSquare@{BoardSquare}}
+
+
+Represents an individual square on the checkers board.  
+
+
+
+
+{\ttfamily \#include $<$checkersboard.\+h$>$}
+
+Inheritance diagram for Board\+Square\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_board_square}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_board_square_a9b5af1b522ad8bbef80962c6e3a2b714}\label{class_board_square_a9b5af1b522ad8bbef80962c6e3a2b714} 
+{\bfseries Board\+Square} (int row, int col, qreal x, qreal y, qreal w, qreal h, QGraphics\+Item \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs a board square at a specific location. \end{DoxyCompactList}\item 
+\Hypertarget{class_board_square_a08d08bc9e43e38ce5373ff7bb19243ff}\label{class_board_square_a08d08bc9e43e38ce5373ff7bb19243ff} 
+int {\bfseries get\+Row} () const
+\item 
+\Hypertarget{class_board_square_abe38ff3a007e0cb050d9d818c36356f1}\label{class_board_square_abe38ff3a007e0cb050d9d818c36356f1} 
+int {\bfseries get\+Col} () const
+\item 
+\Hypertarget{class_board_square_a7b72e0b3a61530abded4575f6dfdf612}\label{class_board_square_a7b72e0b3a61530abded4575f6dfdf612} 
+void {\bfseries reset\+Color} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_board_square_a8e1327a98010e618c61c607f3ff87c64}\label{class_board_square_a8e1327a98010e618c61c607f3ff87c64} 
+void {\bfseries mouse\+Press\+Event} (QGraphics\+Scene\+Mouse\+Event \texorpdfstring{$\ast$}{*}event) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_board_square_aaca7797b18704fc8d029f4d59cf39b45}\label{class_board_square_aaca7797b18704fc8d029f4d59cf39b45} 
+int {\bfseries m\+\_\+row}
+\item 
+\Hypertarget{class_board_square_a9b1cdccef097c7be0ee432b45f24eab9}\label{class_board_square_a9b1cdccef097c7be0ee432b45f24eab9} 
+int {\bfseries m\+\_\+col}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an individual square on the checkers board. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{checkersboard_8h}{checkersboard.\+h}}\item 
+\mbox{\hyperlink{checkersboard_8cpp}{checkersboard.\+cpp}}\end{DoxyCompactItemize}

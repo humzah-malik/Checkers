@@ -1,0 +1,35 @@
+\doxysection{piece.\+h File Reference}
+\hypertarget{piece_8h}{}\label{piece_8h}\index{piece.h@{piece.h}}
+
+
+Represents a checkers piece on the game board.  
+
+
+{\ttfamily \#include $<$QGraphics\+Pixmap\+Item$>$}\newline
+{\ttfamily \#include $<$QObject$>$}\newline
+{\ttfamily \#include $<$QDebug$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_piece}{Piece}}
+\begin{DoxyCompactList}\small\item\em Represents a single piece on the checkers board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}\label{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985} 
+enum class \mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} \{ {\bfseries Red}
+, {\bfseries Black}
+, {\bfseries Green}
+, {\bfseries Yellow}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the team/color of a checkers piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a checkers piece on the game board. 
+
+Each piece tracks its color, king status, position, and ID. Handles click events and updates its icon on promotion/demotion.
+
+\begin{DoxyAuthor}{Author}
+Lok Hui 
+\end{DoxyAuthor}

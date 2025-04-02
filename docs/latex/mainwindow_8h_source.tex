@@ -1,0 +1,115 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QStackedWidget>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QMediaPlayer>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QAudioOutput>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QSoundEffect>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{checkersmenu_8h}{checkersmenu.h}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}checkersmanager.h"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gamepage_8h}{gamepage.h}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{frontpage_8h}{frontpage.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pvppage_8h}{pvppage.h}}"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pvaipage_8h}{pvaipage.h}}"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{instructionspage_8h}{instructionspage.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{settingsdialog_8h}{settingsdialog.h}}"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ Plays\ the\ selection\ click\ sound.}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a561d7653a2d8774384580a37fca2a75f}{playSelectSound}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ Displays\ the\ game\ description\ page\ (text-\/based\ overview).}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ad423bcd522a8c55a61ee3aa91a603d58}{showGameDescriptionPage}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ Starts\ a\ new\ game\ based\ on\ user-\/selected\ options.}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a3677607a35200e535b6cde1f2cfe2e23}{onStartGame}}(\textcolor{keywordtype}{int}\ numPlayers,\ \textcolor{keyword}{const}\ QString\ \&difficulty,\ \textcolor{keywordtype}{bool}\ showHints,\ \textcolor{keywordtype}{bool}\ soundEnabled,\ \textcolor{keywordtype}{bool}\ aiEnable);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Returns\ to\ the\ initial\ front\ page.}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aef3ef652bc233146331ad5bef3f3cbb2}{onBackToFrontPage}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ Returns\ to\ the\ game\ selection\ screen\ (e.g.\ Checkers\ menu).}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4d69f198c08931b23317adfb40b7c92a}{onBackToGameMenu}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Quits\ the\ application.}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aab6ca9db2cbb0e8ed2d45db3fc5641f5}{onExitApp}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ Shows\ the\ classic\ Checkers\ menu.}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a00959caaeb848df7b5cecbe77fa620ec}{showCheckersMenu}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ Shows\ 2-\/player\ local\ game\ setup\ page.}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a568015636fcab9f35f3d0482e91562ce}{showPvPPage}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ Shows\ Player\ vs\ AI\ game\ setup\ page.}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a26566a567aa351741ffc26db4b01522d}{showPvAIPage}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//\ Opens\ the\ instructions\ page.}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ac20c62334153203fd1d6fe56909ac078}{showInstructionsPage}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//\ Launches\ the\ settings\ dialog.}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aae6fca90e8369aa6745e9ad6c66e25e0}{openSettingsDialog}}();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//\ Enables/disables\ background\ music.}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a207ce6f610f2082affa69f96bc17eec6}{toggleMusic}}(\textcolor{keywordtype}{bool}\ enabled);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//\ Enables/disables\ game\ sound\ effects.}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a2e213f512dd5f31a1f1832b892afecdc}{toggleSoundEffects}}(\textcolor{keywordtype}{bool}\ enabled);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//\ Game\ SFX\ methods}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a5f22edf61a3c54bfc94c8f4cbf9fdd27}{playPieceMoveSound}}();}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_af5027ada7729fadafcd2c8be89937fc5}{playPieceCaptureSound}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a815c5efbe1b6c0b0659347cd0230da4d}{playKingPromotionSound}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a94550427a0abacaa3e030103565e39d4}{playTurnChangeSound}}();}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a43bf59ae8075ca2b91ac048c1779bc8c}{playGameEndSound}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_main_window_1_1_game_entry}{GameEntry}}\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ std::function<QWidget*(QWidget*)>\ createMenu;\ \ \ \ \ \ \textcolor{comment}{//\ Factory\ to\ create\ the\ game\ setup\ menu}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ std::function<QWidget*()>\ createBoard;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Factory\ to\ create\ the\ game\ board\ widget}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ std::function<QObject*(QObject*)>\ createManager;\ \ \ \textcolor{comment}{//\ Factory\ to\ create\ the\ game\ manager/controller}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ QString\ title;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Game\ title\ for\ UI}}
+\DoxyCodeLine{00106\ \ \ \ \ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ QMap<QString,\ GameEntry>\ gameRegistry;\ \ \textcolor{comment}{//\ Registry\ of\ supported\ games}}
+\DoxyCodeLine{00109\ \ \ \ \ QString\ currentGameKey;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Active\ game\ key\ for\ dynamic\ switching}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ QStackedWidget\ *stack;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Main\ layout\ stack\ (page\ navigation)}}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{class_front_page}{FrontPage}}\ *frontPage;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Landing\ screen}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ QWidget\ *currentMenu\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Active\ menu\ widget}}
+\DoxyCodeLine{00115\ \ \ \ \ QWidget\ *currentGameWidget\ =\ \textcolor{keyword}{nullptr};\ \ \ \textcolor{comment}{//\ Active\ board\ widget}}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{class_game_page}{GamePage}}\ *activeGamePage\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \textcolor{comment}{//\ Container\ for\ board\ +\ controls}}
+\DoxyCodeLine{00117\ \ \ \ \ QObject\ *gameManager\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Controller/logic\ for\ current\ game}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ QMediaPlayer\ *backgroundMusicPlayer;\ \ \ \ \textcolor{comment}{//\ Music\ playback}}
+\DoxyCodeLine{00120\ \ \ \ \ QAudioOutput\ *audioOutput;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Audio\ output\ handler}}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{bool}\ isMusicEnabled\ =\ \textcolor{keyword}{true};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tracks\ music\ state}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ QMap<QString,\ QSoundEffect*>\ soundEffects;\ \textcolor{comment}{//\ Cached\ sound\ effects\ (move,\ capture,\ etc.)}}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{bool}\ isSoundEffectsEnabled\ =\ \textcolor{keyword}{true};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tracks\ sound\ effects\ state}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//\ Registers\ all\ playable\ games.}}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a5130858e22c0d23207c3c51eabc5a9f7}{registerGames}}();}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//\ Loads\ and\ prepares\ sound\ effects\ for\ gameplay.}}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a720487ef44846ef6b16974f1ab61d5eb}{initializeSoundEffects}}();}
+\DoxyCodeLine{00131\ \};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,30 @@
+\doxysection{checkersboard.\+cpp File Reference}
+\hypertarget{checkersboard_8cpp}{}\label{checkersboard_8cpp}\index{checkersboard.cpp@{checkersboard.cpp}}
+
+
+Implements the \doxylink{class_checkers_board}{Checkers\+Board} and \doxylink{class_board_square}{Board\+Square} classes for managing the checkers game UI and logic.  
+
+
+{\ttfamily \#include "{}checkersboard.\+h"{}}\newline
+{\ttfamily \#include "{}piece.\+h"{}}\newline
+{\ttfamily \#include $<$QGraphics\+Pixmap\+Item$>$}\newline
+{\ttfamily \#include $<$QGraphics\+Scene$>$}\newline
+{\ttfamily \#include $<$QPainter$>$}\newline
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{checkersboard_8cpp_a3d75a3045c57e393b76a1760deb2533c}\label{checkersboard_8cpp_a3d75a3045c57e393b76a1760deb2533c} 
+static const int {\bfseries CELL\+\_\+\+SIZE} = 58
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the \doxylink{class_checkers_board}{Checkers\+Board} and \doxylink{class_board_square}{Board\+Square} classes for managing the checkers game UI and logic. 
+
+This file handles the visual representation of the checkers board, move validation, captures, king promotion, turn switching, highlighting valid moves, undo functionality, and win condition checking.
+
+It also defines \doxylink{class_board_square}{Board\+Square} for individual cells and manages user interactions via mouse clicks.
+
+\begin{DoxyAuthor}{Author}
+Lok Hui, Humzah Zahid Malik, Krish Bhavin Patel 
+\end{DoxyAuthor}

@@ -1,0 +1,488 @@
+\doxysection{Checkers\+Board Class Reference}
+\hypertarget{class_checkers_board}{}\label{class_checkers_board}\index{CheckersBoard@{CheckersBoard}}
+
+
+Manages the visual board and game logic for Checkers.  
+
+
+
+
+{\ttfamily \#include $<$checkersboard.\+h$>$}
+
+Inheritance diagram for Checkers\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_checkers_board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_checkers_board_affb49a75bf65afbd99cee205ea7ea000}\label{class_checkers_board_affb49a75bf65afbd99cee205ea7ea000} 
+void {\bfseries move\+Completed} ()
+\item 
+\Hypertarget{class_checkers_board_a7bff11b1733f09a6f9e468ada1886911}\label{class_checkers_board_a7bff11b1733f09a6f9e468ada1886911} 
+void {\bfseries game\+Check} ()
+\item 
+\Hypertarget{class_checkers_board_aef21859d715315ae669fb2b841adfdfd}\label{class_checkers_board_aef21859d715315ae669fb2b841adfdfd} 
+void {\bfseries turn\+Changed} (\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} new\+Turn)
+\item 
+\Hypertarget{class_checkers_board_adcb35e5ce7c75dda91b2f2e7f0047ced}\label{class_checkers_board_adcb35e5ce7c75dda91b2f2e7f0047ced} 
+void {\bfseries piece\+Captured} ()
+\item 
+\Hypertarget{class_checkers_board_a4958024ba8a24a30f350761f320ba15a}\label{class_checkers_board_a4958024ba8a24a30f350761f320ba15a} 
+void {\bfseries piece\+Promoted} ()
+\item 
+\Hypertarget{class_checkers_board_a0b333e2508632bd78104a846db3dd882}\label{class_checkers_board_a0b333e2508632bd78104a846db3dd882} 
+void {\bfseries game\+Ended} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_checkers_board_abe5b530e3c68aadec560f1471409a035}\label{class_checkers_board_abe5b530e3c68aadec560f1471409a035} 
+{\bfseries Checkers\+Board} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_checkers_board_ac42b8820a916d420b0cab893e791f95b}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of the current board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_checkers_board_aac730652c2d06adb1eb8a72f1512e322}{get\+Piece\+At}} (int row, int col)
+\begin{DoxyCompactList}\small\item\em Returns the piece located at a specific row and column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_checkers_board_a96b3bfed1c5eea4de80593f855f0dc6c}{get\+Piece\+By\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Finds a piece by its unique ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_acff4610d3be5a35080d0f5eede4b59bc}{handle\+Move}} (\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece, int new\+Row, int new\+Col)
+\begin{DoxyCompactList}\small\item\em Handles the movement of a piece to a new position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_checkers_board_a622c16486cad2252794901317ffea0cf}{is\+Valid\+Move}} (\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece, int new\+Row, int new\+Col)
+\begin{DoxyCompactList}\small\item\em Checks if a given move for a piece is valid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_checkers_board_ab38a322fc04b5f780f6ac11cb06b6b3c}{is\+Any\+Capture\+Available}} ()
+\begin{DoxyCompactList}\small\item\em Checks if any piece of the current player has a capture move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_checkers_board_a71bde7360f5157d6f4423a9f020f16f4}{has\+Valid\+Moves}} (\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} color)
+\begin{DoxyCompactList}\small\item\em Checks if the given color has any valid move available. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_checkers_board_a1da164397c0957ece0a0a9b1834d69b1}{is\+Capture\+Available}} (\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\begin{DoxyCompactList}\small\item\em Checks if a piece has any available capture moves. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_checkers_board_aecbe69bac40bf90b8b48b5dec81aef40}{is\+Capture\+Move}} (\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece, int new\+Row, int new\+Col)
+\begin{DoxyCompactList}\small\item\em Checks if a specific move is a valid capture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_af160f97a34cc2010eda3af8e0f97da4f}{set\+Selected\+Piece}} (\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\begin{DoxyCompactList}\small\item\em Sets the selected piece and highlights its possible moves. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_a328e3100f9c7bab7e8c4dbe817648e31}{switch\+Turn}} ()
+\begin{DoxyCompactList}\small\item\em Switches the current turn to the opposing player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_a7d8e91ab88ce0a28da059a669112388a}{force\+Turn}} (\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} color)
+\begin{DoxyCompactList}\small\item\em Forces the turn to the specified color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_checkers_board_a2e7347a58fdce9a9c33441b563239f19}{get\+Selected\+Piece}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the currently selected piece on the board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} \mbox{\hyperlink{class_checkers_board_a0ade97688fc6fa02a6edfc5fc51bd254}{get\+Current\+Turn}} () const
+\begin{DoxyCompactList}\small\item\em Gets the color of the current player\textquotesingle{}s turn. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_checkers_board_aaba87df1f98369aefdb70e1294d89a03}{checkwin}} (\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} color)
+\begin{DoxyCompactList}\small\item\em Checks if the given color has won the game. \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_checkers_board_a725794e16d160d4e453b35dc2559458e}{get\+Pieces}} (\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} color)
+\begin{DoxyCompactList}\small\item\em Gets all pieces of a specific color on the board. \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_checkers_board_afc0f7653d7b8b9acf1d3c1fd1334ad82}{get\+AIPieces}} ()
+\begin{DoxyCompactList}\small\item\em Returns all AI-\/controlled pieces (assumes Red is \doxylink{class_a_i}{AI}). \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_checkers_board_a7a371e8f3dcba30ea2797c2eda2fe83c}{get\+Opponent\+Pieces}} ()
+\begin{DoxyCompactList}\small\item\em Returns all opponent pieces (assumes Black is opponent). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_a8df962c4cb76a2544ebfad5960ef9e1b}{undo\+Last\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the most recent move from move history. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_a3729576350fc75f7252c687e293e645d}{highlight\+Valid\+Moves}} (\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\begin{DoxyCompactList}\small\item\em Highlights all valid destination squares for the selected piece. \end{DoxyCompactList}\item 
+\Hypertarget{class_checkers_board_ae2ca0dc32c50536b44f2ae230d1f4dac}\label{class_checkers_board_ae2ca0dc32c50536b44f2ae230d1f4dac} 
+void {\bfseries clear\+Highlighted\+Squares} ()
+\begin{DoxyCompactList}\small\item\em Clears all square highlights from previous move suggestions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_checkers_board_a0f68ab2f8a3c556f2c3a332b45fa6e74}\label{class_checkers_board_a0f68ab2f8a3c556f2c3a332b45fa6e74} 
+bool {\bfseries is\+Pieces\+Turn} (\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\begin{DoxyCompactList}\small\item\em Checks if a piece belongs to the current player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_a4b79041621c85b394d70cbe307079cd6}{initialize\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the board squares and their layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_board_a9619c18c616c658359ebd63dad7bef76}{initialize\+Pieces}} ()
+\begin{DoxyCompactList}\small\item\em Initializes all red and black pieces on the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_checkers_board_a829e21cee5b13c1813993c4748b1bd83}\label{class_checkers_board_a829e21cee5b13c1813993c4748b1bd83} 
+QGraphics\+Scene \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+scene}
+\item 
+\Hypertarget{class_checkers_board_a72b8c85d686b9f5cfe0d3452763efc26}\label{class_checkers_board_a72b8c85d686b9f5cfe0d3452763efc26} 
+\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} {\bfseries selected\+Piece}
+\item 
+\Hypertarget{class_checkers_board_afdf97246a292eaef8436ba162eee4031}\label{class_checkers_board_afdf97246a292eaef8436ba162eee4031} 
+\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} {\bfseries current\+Turn} = Piece\+Color\+::\+Black
+\item 
+\Hypertarget{class_checkers_board_a42fa98e861ee6c42f75c92fd2f946ac2}\label{class_checkers_board_a42fa98e861ee6c42f75c92fd2f946ac2} 
+std\+::stack$<$ \mbox{\hyperlink{struct_move_record}{Move\+Record}} $>$ {\bfseries move\+History}
+\item 
+\Hypertarget{class_checkers_board_a09781663590239a427d1961ded66916a}\label{class_checkers_board_a09781663590239a427d1961ded66916a} 
+QList$<$ \mbox{\hyperlink{class_board_square}{Board\+Square}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries m\+\_\+highlighted\+Squares}
+\item 
+\Hypertarget{class_checkers_board_a08c2990725cb998a3e21d83d21e71858}\label{class_checkers_board_a08c2990725cb998a3e21d83d21e71858} 
+bool {\bfseries m\+\_\+capture\+Made} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the visual board and game logic for Checkers. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_checkers_board_aaba87df1f98369aefdb70e1294d89a03}\index{CheckersBoard@{CheckersBoard}!checkwin@{checkwin}}
+\index{checkwin@{checkwin}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{checkwin()}{checkwin()}}
+{\footnotesize\ttfamily \label{class_checkers_board_aaba87df1f98369aefdb70e1294d89a03} 
+bool Checkers\+Board\+::checkwin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}}}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the given color has won the game. 
+
+A player wins if their opponent has no valid moves left.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The player to check win condition for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player has won, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_ac42b8820a916d420b0cab893e791f95b}\index{CheckersBoard@{CheckersBoard}!clone@{clone}}
+\index{clone@{clone}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{class_checkers_board_ac42b8820a916d420b0cab893e791f95b} 
+\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \texorpdfstring{$\ast$}{*} Checkers\+Board\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Creates a deep copy of the current board. 
+
+Copies piece positions, states, and turn info to a new \doxylink{class_checkers_board}{Checkers\+Board} instance.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the newly cloned \doxylink{class_checkers_board}{Checkers\+Board}. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_a7d8e91ab88ce0a28da059a669112388a}\index{CheckersBoard@{CheckersBoard}!forceTurn@{forceTurn}}
+\index{forceTurn@{forceTurn}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{forceTurn()}{forceTurn()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a7d8e91ab88ce0a28da059a669112388a} 
+void Checkers\+Board\+::force\+Turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}}}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Forces the turn to the specified color. 
+
+Used for manual overrides or debugging. 
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to set as the current turn. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_checkers_board_afc0f7653d7b8b9acf1d3c1fd1334ad82}\index{CheckersBoard@{CheckersBoard}!getAIPieces@{getAIPieces}}
+\index{getAIPieces@{getAIPieces}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{getAIPieces()}{getAIPieces()}}
+{\footnotesize\ttfamily \label{class_checkers_board_afc0f7653d7b8b9acf1d3c1fd1334ad82} 
+QList$<$ \mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ Checkers\+Board\+::get\+AIPieces (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns all AI-\/controlled pieces (assumes Red is \doxylink{class_a_i}{AI}). 
+
+\begin{DoxyReturn}{Returns}
+QList of red pieces. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_a0ade97688fc6fa02a6edfc5fc51bd254}\index{CheckersBoard@{CheckersBoard}!getCurrentTurn@{getCurrentTurn}}
+\index{getCurrentTurn@{getCurrentTurn}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{getCurrentTurn()}{getCurrentTurn()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a0ade97688fc6fa02a6edfc5fc51bd254} 
+\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} Checkers\+Board\+::get\+Current\+Turn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the color of the current player\textquotesingle{}s turn. 
+
+This function returns the color (Red or Black) representing whose turn it is to move on the board.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color} The color of the current player. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_a7a371e8f3dcba30ea2797c2eda2fe83c}\index{CheckersBoard@{CheckersBoard}!getOpponentPieces@{getOpponentPieces}}
+\index{getOpponentPieces@{getOpponentPieces}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{getOpponentPieces()}{getOpponentPieces()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a7a371e8f3dcba30ea2797c2eda2fe83c} 
+QList$<$ \mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ Checkers\+Board\+::get\+Opponent\+Pieces (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns all opponent pieces (assumes Black is opponent). 
+
+\begin{DoxyReturn}{Returns}
+QList of black pieces. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_aac730652c2d06adb1eb8a72f1512e322}\index{CheckersBoard@{CheckersBoard}!getPieceAt@{getPieceAt}}
+\index{getPieceAt@{getPieceAt}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{getPieceAt()}{getPieceAt()}}
+{\footnotesize\ttfamily \label{class_checkers_board_aac730652c2d06adb1eb8a72f1512e322} 
+\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} Checkers\+Board\+::get\+Piece\+At (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{col}{}\end{DoxyParamCaption})}
+
+
+
+Returns the piece located at a specific row and column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Board row to search. \\
+\hline
+{\em col} & Board column to search. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the matching piece, or nullptr if none found. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_a96b3bfed1c5eea4de80593f855f0dc6c}\index{CheckersBoard@{CheckersBoard}!getPieceById@{getPieceById}}
+\index{getPieceById@{getPieceById}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{getPieceById()}{getPieceById()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a96b3bfed1c5eea4de80593f855f0dc6c} 
+\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} Checkers\+Board\+::get\+Piece\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Finds a piece by its unique ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the piece. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the piece if found, nullptr otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_a725794e16d160d4e453b35dc2559458e}\index{CheckersBoard@{CheckersBoard}!getPieces@{getPieces}}
+\index{getPieces@{getPieces}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{getPieces()}{getPieces()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a725794e16d160d4e453b35dc2559458e} 
+QList$<$ \mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ Checkers\+Board\+::get\+Pieces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}}}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Gets all pieces of a specific color on the board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to filter by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QList of matching pieces. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_a2e7347a58fdce9a9c33441b563239f19}\index{CheckersBoard@{CheckersBoard}!getSelectedPiece@{getSelectedPiece}}
+\index{getSelectedPiece@{getSelectedPiece}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{getSelectedPiece()}{getSelectedPiece()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a2e7347a58fdce9a9c33441b563239f19} 
+\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} Checkers\+Board\+::get\+Selected\+Piece (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the currently selected piece on the board. 
+
+This function returns a pointer to the piece that is currently selected by the player. If no piece is selected, it returns nullptr.
+
+\begin{DoxyReturn}{Returns}
+Piece\texorpdfstring{$\ast$}{*} Pointer to the selected piece, or nullptr if none. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_acff4610d3be5a35080d0f5eede4b59bc}\index{CheckersBoard@{CheckersBoard}!handleMove@{handleMove}}
+\index{handleMove@{handleMove}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{handleMove()}{handleMove()}}
+{\footnotesize\ttfamily \label{class_checkers_board_acff4610d3be5a35080d0f5eede4b59bc} 
+void Checkers\+Board\+::handle\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece}{, }\item[{int}]{new\+Row}{, }\item[{int}]{new\+Col}{}\end{DoxyParamCaption})}
+
+
+
+Handles the movement of a piece to a new position. 
+
+Validates the move, performs captures, handles promotion, stores the move in history for undo, and emits relevant signals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & Pointer to the piece being moved. \\
+\hline
+{\em new\+Row} & Target row to move the piece to. \\
+\hline
+{\em new\+Col} & Target column to move the piece to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_checkers_board_a71bde7360f5157d6f4423a9f020f16f4}\index{CheckersBoard@{CheckersBoard}!hasValidMoves@{hasValidMoves}}
+\index{hasValidMoves@{hasValidMoves}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{hasValidMoves()}{hasValidMoves()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a71bde7360f5157d6f4423a9f020f16f4} 
+bool Checkers\+Board\+::has\+Valid\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}}}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the given color has any valid move available. 
+
+Looks for either capture moves or normal moves for all pieces of the given color.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to check moves for (Red or Black). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if at least one valid move is available, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_a3729576350fc75f7252c687e293e645d}\index{CheckersBoard@{CheckersBoard}!highlightValidMoves@{highlightValidMoves}}
+\index{highlightValidMoves@{highlightValidMoves}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{highlightValidMoves()}{highlightValidMoves()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a3729576350fc75f7252c687e293e645d} 
+void Checkers\+Board\+::highlight\+Valid\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece}{}\end{DoxyParamCaption})}
+
+
+
+Highlights all valid destination squares for the selected piece. 
+
+Also shows captures in dark green, and normal moves in light green.
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & Pointer to the piece to check moves for. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_checkers_board_a4b79041621c85b394d70cbe307079cd6}\index{CheckersBoard@{CheckersBoard}!initializeBoard@{initializeBoard}}
+\index{initializeBoard@{initializeBoard}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{initializeBoard()}{initializeBoard()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a4b79041621c85b394d70cbe307079cd6} 
+void Checkers\+Board\+::initialize\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initializes the board squares and their layout. 
+
+Alternates colors for a checkered appearance and adds them to the scene. \Hypertarget{class_checkers_board_a9619c18c616c658359ebd63dad7bef76}\index{CheckersBoard@{CheckersBoard}!initializePieces@{initializePieces}}
+\index{initializePieces@{initializePieces}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{initializePieces()}{initializePieces()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a9619c18c616c658359ebd63dad7bef76} 
+void Checkers\+Board\+::initialize\+Pieces (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initializes all red and black pieces on the board. 
+
+Red is placed at the top rows, black at the bottom. \Hypertarget{class_checkers_board_ab38a322fc04b5f780f6ac11cb06b6b3c}\index{CheckersBoard@{CheckersBoard}!isAnyCaptureAvailable@{isAnyCaptureAvailable}}
+\index{isAnyCaptureAvailable@{isAnyCaptureAvailable}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{isAnyCaptureAvailable()}{isAnyCaptureAvailable()}}
+{\footnotesize\ttfamily \label{class_checkers_board_ab38a322fc04b5f780f6ac11cb06b6b3c} 
+bool Checkers\+Board\+::is\+Any\+Capture\+Available (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if any piece of the current player has a capture move. 
+
+Used to enforce mandatory capture rules.
+
+\begin{DoxyReturn}{Returns}
+true if any capture is available for current\+Turn, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_a1da164397c0957ece0a0a9b1834d69b1}\index{CheckersBoard@{CheckersBoard}!isCaptureAvailable@{isCaptureAvailable}}
+\index{isCaptureAvailable@{isCaptureAvailable}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{isCaptureAvailable()}{isCaptureAvailable()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a1da164397c0957ece0a0a9b1834d69b1} 
+bool Checkers\+Board\+::is\+Capture\+Available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a piece has any available capture moves. 
+
+Attempts all possible jump directions to find at least one valid capture.
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & The piece to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if any capture is available, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_aecbe69bac40bf90b8b48b5dec81aef40}\index{CheckersBoard@{CheckersBoard}!isCaptureMove@{isCaptureMove}}
+\index{isCaptureMove@{isCaptureMove}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{isCaptureMove()}{isCaptureMove()}}
+{\footnotesize\ttfamily \label{class_checkers_board_aecbe69bac40bf90b8b48b5dec81aef40} 
+bool Checkers\+Board\+::is\+Capture\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece}{, }\item[{int}]{new\+Row}{, }\item[{int}]{new\+Col}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a specific move is a valid capture. 
+
+Validates jump distance, direction, and presence of an opponent between source and destination.
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & The piece attempting the move. \\
+\hline
+{\em new\+Row} & The target row. \\
+\hline
+{\em new\+Col} & The target column. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is a legal capture, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_a622c16486cad2252794901317ffea0cf}\index{CheckersBoard@{CheckersBoard}!isValidMove@{isValidMove}}
+\index{isValidMove@{isValidMove}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{isValidMove()}{isValidMove()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a622c16486cad2252794901317ffea0cf} 
+bool Checkers\+Board\+::is\+Valid\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece}{, }\item[{int}]{new\+Row}{, }\item[{int}]{new\+Col}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a given move for a piece is valid. 
+
+Handles basic move rules, prevents backward moves for non-\/kings, and checks square occupation and capture conditions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & The piece to move. \\
+\hline
+{\em new\+Row} & The row to move to. \\
+\hline
+{\em new\+Col} & The column to move to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_checkers_board_af160f97a34cc2010eda3af8e0f97da4f}\index{CheckersBoard@{CheckersBoard}!setSelectedPiece@{setSelectedPiece}}
+\index{setSelectedPiece@{setSelectedPiece}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{setSelectedPiece()}{setSelectedPiece()}}
+{\footnotesize\ttfamily \label{class_checkers_board_af160f97a34cc2010eda3af8e0f97da4f} 
+void Checkers\+Board\+::set\+Selected\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece}{}\end{DoxyParamCaption})}
+
+
+
+Sets the selected piece and highlights its possible moves. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & The piece to mark as selected. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_checkers_board_a328e3100f9c7bab7e8c4dbe817648e31}\index{CheckersBoard@{CheckersBoard}!switchTurn@{switchTurn}}
+\index{switchTurn@{switchTurn}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{switchTurn()}{switchTurn()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a328e3100f9c7bab7e8c4dbe817648e31} 
+void Checkers\+Board\+::switch\+Turn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Switches the current turn to the opposing player. 
+
+Emits a signal to notify about the new turn. \Hypertarget{class_checkers_board_a8df962c4cb76a2544ebfad5960ef9e1b}\index{CheckersBoard@{CheckersBoard}!undoLastMove@{undoLastMove}}
+\index{undoLastMove@{undoLastMove}!CheckersBoard@{CheckersBoard}}
+\doxysubsubsection{\texorpdfstring{undoLastMove()}{undoLastMove()}}
+{\footnotesize\ttfamily \label{class_checkers_board_a8df962c4cb76a2544ebfad5960ef9e1b} 
+void Checkers\+Board\+::undo\+Last\+Move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Undoes the most recent move from move history. 
+
+Restores piece position, reverts promotions, and brings back captured pieces. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{checkersboard_8h}{checkersboard.\+h}}\item 
+\mbox{\hyperlink{checkersboard_8cpp}{checkersboard.\+cpp}}\end{DoxyCompactItemize}

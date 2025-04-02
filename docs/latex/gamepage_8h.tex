@@ -1,0 +1,30 @@
+\doxysection{gamepage.\+h File Reference}
+\hypertarget{gamepage_8h}{}\label{gamepage_8h}\index{gamepage.h@{gamepage.h}}
+
+
+Implements the main in-\/game UI for a Checkers match.  
+
+
+{\ttfamily \#include $<$QWidget$>$}\newline
+{\ttfamily \#include $<$QVBox\+Layout$>$}\newline
+{\ttfamily \#include $<$QHBox\+Layout$>$}\newline
+{\ttfamily \#include $<$QPush\+Button$>$}\newline
+{\ttfamily \#include $<$QLabel$>$}\newline
+{\ttfamily \#include "{}arrowbutton.\+h"{}}\newline
+{\ttfamily \#include "{}piece.\+h"{}}\newline
+{\ttfamily \#include "{}checkersboard.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_page}{Game\+Page}}
+\begin{DoxyCompactList}\small\item\em Main UI container for a Checkers game session. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the main in-\/game UI for a Checkers match. 
+
+Sets up the game layout, controls (undo, back, settings, exit), and displays turn indicators, undo counts, and game-\/over dialogs. Handles user interactions and connects to \doxylink{class_checkers_board}{Checkers\+Board} events.
+
+\begin{DoxyAuthor}{Author}
+Lok Hui 
+\end{DoxyAuthor}

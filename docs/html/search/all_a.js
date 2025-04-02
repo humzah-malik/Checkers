@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['main_2ecpp_0',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['mainwindow_1',['MainWindow',['../class_main_window.html',1,'MainWindow'],['../class_main_window.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow::MainWindow()']]],
+  ['mainwindow_2ecpp_2',['mainwindow.cpp',['../mainwindow_8cpp.html',1,'']]],
+  ['mainwindow_2eh_3',['mainwindow.h',['../mainwindow_8h.html',1,'']]],
+  ['makeaimove_4',['makeAIMove',['../class_checkers_manager.html#a6bb641936b5acc284be2a86b7f111f85',1,'CheckersManager']]],
+  ['makemove_5',['makeMove',['../class_player.html#a7585711bae8ed16cb7b0f99c02244ff1',1,'Player']]],
+  ['maxdepth_6',['maxDepth',['../class_mini_max_algo.html#af44d108a57699f2f2c574fdb438badad',1,'MiniMaxAlgo']]],
+  ['minimax_7',['minimax',['../class_mini_max_algo.html#aec85d3d05d9cb566593c08ebd4cb423b',1,'MiniMaxAlgo']]],
+  ['minimaxalgo_8',['MiniMaxAlgo',['../class_mini_max_algo.html',1,'MiniMaxAlgo'],['../class_mini_max_algo.html#a02215585b96ea4eba1e4925713787bee',1,'MiniMaxAlgo::MiniMaxAlgo()']]],
+  ['minimaxalgo_9',['minimaxAlgo',['../class_a_i.html#a939c2490964f00f0739012e3ecc3b809',1,'AI']]],
+  ['minimaxalgo_2ecpp_10',['MiniMaxAlgo.cpp',['../_mini_max_algo_8cpp.html',1,'']]],
+  ['minimaxalgo_2eh_11',['MiniMaxAlgo.h',['../_mini_max_algo_8h.html',1,'']]],
+  ['minusdifficultyslot_12',['minusDifficultySlot',['../class_checkers_menu.html#a5c7b4a1ce3dadc3800b92117a9b09804',1,'CheckersMenu']]],
+  ['mousepressevent_13',['mousePressEvent',['../class_piece.html#a6a95876f3f9a38dd99ab5e25da9bb07f',1,'Piece']]],
+  ['moverecord_14',['MoveRecord',['../struct_move_record.html',1,'']]],
+  ['musictoggled_15',['musicToggled',['../class_settings_dialog.html#aaf5b97afb55a7d5e516c86a599cad267',1,'SettingsDialog']]]
+];

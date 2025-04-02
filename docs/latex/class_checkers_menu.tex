@@ -1,0 +1,239 @@
+\doxysection{Checkers\+Menu Class Reference}
+\hypertarget{class_checkers_menu}{}\label{class_checkers_menu}\index{CheckersMenu@{CheckersMenu}}
+
+
+UI widget for setting up game preferences before starting a Checkers match.  
+
+
+
+
+{\ttfamily \#include $<$checkersmenu.\+h$>$}
+
+Inheritance diagram for Checkers\+Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_checkers_menu}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_checkers_menu_aff4ff59c93ca5e83d06305e2b86cc4b7}{start\+Game\+Signaled}} (int num\+Players, const QString \&difficulty, bool show\+Hints\+Is\+Enabled, bool sound\+Effect\+Is\+Enabled, bool ai\+Enabled)
+\begin{DoxyCompactList}\small\item\em Emitted when the Start button is clicked. \end{DoxyCompactList}\item 
+\Hypertarget{class_checkers_menu_a2d92048ff1c18f832d6dd1c13116fbc7}\label{class_checkers_menu_a2d92048ff1c18f832d6dd1c13116fbc7} 
+void {\bfseries back\+To\+Front\+Page} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the Back button is clicked. \end{DoxyCompactList}\item 
+\Hypertarget{class_checkers_menu_aad1917bde1ded3739450b5d25bbc0c60}\label{class_checkers_menu_aad1917bde1ded3739450b5d25bbc0c60} 
+void {\bfseries exit\+App\+Requested} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the Exit button is clicked. \end{DoxyCompactList}\item 
+\Hypertarget{class_checkers_menu_a68de3f1752ab35fbb9b1f2f08c207f94}\label{class_checkers_menu_a68de3f1752ab35fbb9b1f2f08c207f94} 
+void {\bfseries pvp\+Selected} ()
+\begin{DoxyCompactList}\small\item\em Emitted when PvP mode is selected. \end{DoxyCompactList}\item 
+\Hypertarget{class_checkers_menu_a07d6e595c2ce361fd3501c9596b5cb7f}\label{class_checkers_menu_a07d6e595c2ce361fd3501c9596b5cb7f} 
+void {\bfseries pvai\+Selected} ()
+\begin{DoxyCompactList}\small\item\em Emitted when Pv\+AI mode is selected. \end{DoxyCompactList}\item 
+\Hypertarget{class_checkers_menu_a94da0a4fb43ed30ca4f9671fdc485cf8}\label{class_checkers_menu_a94da0a4fb43ed30ca4f9671fdc485cf8} 
+void {\bfseries instructions\+Selected} ()
+\begin{DoxyCompactList}\small\item\em Emitted when "{}\+Instructions"{} are selected (if implemented). \end{DoxyCompactList}\item 
+\Hypertarget{class_checkers_menu_ac292ebc4c0b44bcba79ea9d0f66ae798}\label{class_checkers_menu_ac292ebc4c0b44bcba79ea9d0f66ae798} 
+void {\bfseries settings\+Requested} ()
+\begin{DoxyCompactList}\small\item\em Emitted when Settings is requested (optional). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_checkers_menu_a001b05ac922d058da0ae32d5b66eb5ae}{Checkers\+Menu}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor for the menu widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_checkers_menu_aeffbc03f3a2ffb8b1843843cc9fec378}{on\+Start\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em Triggered when the Start button is clicked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_menu_a5c7b4a1ce3dadc3800b92117a9b09804}{minus\+Difficulty\+Slot}} ()
+\begin{DoxyCompactList}\small\item\em Triggered when difficulty is decreased. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_menu_af43b993acddcc66ac11f91aac11d6637}{add\+Difficulty\+Slot}} ()
+\begin{DoxyCompactList}\small\item\em Triggered when difficulty is increased. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_menu_a358321c67bc30cdd63107670147575a0}{update\+Game\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Updates the selected game mode based on radio button change. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_checkers_menu_a0b53faf0a3dff331ea59a09fbf550072}{setup\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Builds and lays out the menu UI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_menu_a7ff906e4fbfef8fda2380f575f033357}{update\+Difficulty\+Label}} ()
+\begin{DoxyCompactList}\small\item\em Updates the displayed difficulty label based on difficulty\+Index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_checkers_menu_a691d7aebf465dcef6c6af1530818f1b4}\label{class_checkers_menu_a691d7aebf465dcef6c6af1530818f1b4} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries title\+Label}
+\item 
+\Hypertarget{class_checkers_menu_af1326b16ab74bce873d500dfd32a9ea8}\label{class_checkers_menu_af1326b16ab74bce873d500dfd32a9ea8} 
+\mbox{\hyperlink{class_np_container_widget}{Np\+Container\+Widget}} \texorpdfstring{$\ast$}{*} {\bfseries n\+Players\+Container}
+\item 
+\Hypertarget{class_checkers_menu_afff05246cc1d94c6041b1e762b35cf29}\label{class_checkers_menu_afff05246cc1d94c6041b1e762b35cf29} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries options\+Label}
+\item 
+\Hypertarget{class_checkers_menu_a959061d7183de0be2f92b0934b11281c}\label{class_checkers_menu_a959061d7183de0be2f92b0934b11281c} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries difficulty\+Title\+Label}
+\item 
+\Hypertarget{class_checkers_menu_a4a6fb0f1b40fc1208eaf8c2062d361f7}\label{class_checkers_menu_a4a6fb0f1b40fc1208eaf8c2062d361f7} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries difficulty\+Label}
+\item 
+\Hypertarget{class_checkers_menu_a9b116bb8a212fae4265a6767466905a5}\label{class_checkers_menu_a9b116bb8a212fae4265a6767466905a5} 
+\mbox{\hyperlink{class_arrow_button}{Arrow\+Button}} \texorpdfstring{$\ast$}{*} {\bfseries add\+Difficulty}
+\item 
+\Hypertarget{class_checkers_menu_ae81c90530182e15607fee67900ec2515}\label{class_checkers_menu_ae81c90530182e15607fee67900ec2515} 
+\mbox{\hyperlink{class_arrow_button}{Arrow\+Button}} \texorpdfstring{$\ast$}{*} {\bfseries minus\+Difficulty}
+\item 
+\Hypertarget{class_checkers_menu_a3b2b84eea092c9494c3c6a25f16d3b92}\label{class_checkers_menu_a3b2b84eea092c9494c3c6a25f16d3b92} 
+QCheck\+Box \texorpdfstring{$\ast$}{*} {\bfseries show\+Hints\+Check\+Box}
+\item 
+\Hypertarget{class_checkers_menu_ad54247e0434f281f8391370991af7f69}\label{class_checkers_menu_ad54247e0434f281f8391370991af7f69} 
+QCheck\+Box \texorpdfstring{$\ast$}{*} {\bfseries sound\+Effect\+Check\+Box}
+\item 
+\Hypertarget{class_checkers_menu_a3091bce5a5077124dd07a479a4a3c6dd}\label{class_checkers_menu_a3091bce5a5077124dd07a479a4a3c6dd} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries start\+Button}
+\item 
+\Hypertarget{class_checkers_menu_a69a7d16124e78f6e7036f130d5cb5d40}\label{class_checkers_menu_a69a7d16124e78f6e7036f130d5cb5d40} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries back\+Button}
+\item 
+\Hypertarget{class_checkers_menu_aa048c0919bfa98f568ca7e93c40cf7bb}\label{class_checkers_menu_aa048c0919bfa98f568ca7e93c40cf7bb} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries exit\+Button}
+\item 
+\Hypertarget{class_checkers_menu_ae3b248551617d952278335ce4d8b15a7}\label{class_checkers_menu_ae3b248551617d952278335ce4d8b15a7} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries settings\+Button}
+\item 
+\Hypertarget{class_checkers_menu_a5349b1298ff19f27a757801f65aa523f}\label{class_checkers_menu_a5349b1298ff19f27a757801f65aa523f} 
+int {\bfseries difficulty\+Index}
+\item 
+\Hypertarget{class_checkers_menu_ad09fac20089ddbd317b5a73ce957852a}\label{class_checkers_menu_ad09fac20089ddbd317b5a73ce957852a} 
+QString\+List {\bfseries difficulties}
+\item 
+\Hypertarget{class_checkers_menu_a7065b19617867921b0c1a691a11cae25}\label{class_checkers_menu_a7065b19617867921b0c1a691a11cae25} 
+QRadio\+Button \texorpdfstring{$\ast$}{*} {\bfseries pvp\+Mode}
+\item 
+\Hypertarget{class_checkers_menu_a086d28d79d840bcbe79a0d2d78e60d2a}\label{class_checkers_menu_a086d28d79d840bcbe79a0d2d78e60d2a} 
+QRadio\+Button \texorpdfstring{$\ast$}{*} {\bfseries pvai\+Mode}
+\item 
+\Hypertarget{class_checkers_menu_ac1c5c49ad0d29febb27069d3c9032a3f}\label{class_checkers_menu_ac1c5c49ad0d29febb27069d3c9032a3f} 
+bool {\bfseries is\+AIEnabled} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+UI widget for setting up game preferences before starting a Checkers match. 
+
+Allows users to configure game mode, difficulty, and other settings. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_checkers_menu_a001b05ac922d058da0ae32d5b66eb5ae}\index{CheckersMenu@{CheckersMenu}!CheckersMenu@{CheckersMenu}}
+\index{CheckersMenu@{CheckersMenu}!CheckersMenu@{CheckersMenu}}
+\doxysubsubsection{\texorpdfstring{CheckersMenu()}{CheckersMenu()}}
+{\footnotesize\ttfamily \label{class_checkers_menu_a001b05ac922d058da0ae32d5b66eb5ae} 
+Checkers\+Menu\+::\+Checkers\+Menu (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for the menu widget. 
+
+Constructor for the \doxylink{class_checkers_menu}{Checkers\+Menu}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Optional parent QWidget.\\
+\hline
+\end{DoxyParams}
+Initializes difficulty list and sets up the UI layout. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_checkers_menu_af43b993acddcc66ac11f91aac11d6637}\index{CheckersMenu@{CheckersMenu}!addDifficultySlot@{addDifficultySlot}}
+\index{addDifficultySlot@{addDifficultySlot}!CheckersMenu@{CheckersMenu}}
+\doxysubsubsection{\texorpdfstring{addDifficultySlot}{addDifficultySlot}}
+{\footnotesize\ttfamily \label{class_checkers_menu_af43b993acddcc66ac11f91aac11d6637} 
+void Checkers\+Menu\+::add\+Difficulty\+Slot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Triggered when difficulty is increased. 
+
+Increases difficulty level and updates label. \Hypertarget{class_checkers_menu_a5c7b4a1ce3dadc3800b92117a9b09804}\index{CheckersMenu@{CheckersMenu}!minusDifficultySlot@{minusDifficultySlot}}
+\index{minusDifficultySlot@{minusDifficultySlot}!CheckersMenu@{CheckersMenu}}
+\doxysubsubsection{\texorpdfstring{minusDifficultySlot}{minusDifficultySlot}}
+{\footnotesize\ttfamily \label{class_checkers_menu_a5c7b4a1ce3dadc3800b92117a9b09804} 
+void Checkers\+Menu\+::minus\+Difficulty\+Slot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Triggered when difficulty is decreased. 
+
+Decreases difficulty level and updates label. \Hypertarget{class_checkers_menu_aeffbc03f3a2ffb8b1843843cc9fec378}\index{CheckersMenu@{CheckersMenu}!onStartClicked@{onStartClicked}}
+\index{onStartClicked@{onStartClicked}!CheckersMenu@{CheckersMenu}}
+\doxysubsubsection{\texorpdfstring{onStartClicked}{onStartClicked}}
+{\footnotesize\ttfamily \label{class_checkers_menu_aeffbc03f3a2ffb8b1843843cc9fec378} 
+void Checkers\+Menu\+::on\+Start\+Clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Triggered when the Start button is clicked. 
+
+Emits the start\+Game signal with current settings.
+
+Placeholder implementation for future integration. \Hypertarget{class_checkers_menu_a0b53faf0a3dff331ea59a09fbf550072}\index{CheckersMenu@{CheckersMenu}!setupUI@{setupUI}}
+\index{setupUI@{setupUI}!CheckersMenu@{CheckersMenu}}
+\doxysubsubsection{\texorpdfstring{setupUI()}{setupUI()}}
+{\footnotesize\ttfamily \label{class_checkers_menu_a0b53faf0a3dff331ea59a09fbf550072} 
+void Checkers\+Menu\+::setup\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Builds and lays out the menu UI. 
+
+Builds and styles the full UI for the checkers menu. \Hypertarget{class_checkers_menu_aff4ff59c93ca5e83d06305e2b86cc4b7}\index{CheckersMenu@{CheckersMenu}!startGameSignaled@{startGameSignaled}}
+\index{startGameSignaled@{startGameSignaled}!CheckersMenu@{CheckersMenu}}
+\doxysubsubsection{\texorpdfstring{startGameSignaled}{startGameSignaled}}
+{\footnotesize\ttfamily \label{class_checkers_menu_aff4ff59c93ca5e83d06305e2b86cc4b7} 
+void Checkers\+Menu\+::start\+Game\+Signaled (\begin{DoxyParamCaption}\item[{int}]{num\+Players}{, }\item[{const QString \&}]{difficulty}{, }\item[{bool}]{show\+Hints\+Is\+Enabled}{, }\item[{bool}]{sound\+Effect\+Is\+Enabled}{, }\item[{bool}]{ai\+Enabled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when the Start button is clicked. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Players} & Number of players (1 = Pv\+AI, 2 = PvP) \\
+\hline
+{\em difficulty} & Difficulty level as string \\
+\hline
+{\em show\+Hints\+Is\+Enabled} & Whether hint highlighting is enabled \\
+\hline
+{\em sound\+Effect\+Is\+Enabled} & Whether sound effects are enabled \\
+\hline
+{\em ai\+Enabled} & Whether the game should use \doxylink{class_a_i}{AI} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_checkers_menu_a7ff906e4fbfef8fda2380f575f033357}\index{CheckersMenu@{CheckersMenu}!updateDifficultyLabel@{updateDifficultyLabel}}
+\index{updateDifficultyLabel@{updateDifficultyLabel}!CheckersMenu@{CheckersMenu}}
+\doxysubsubsection{\texorpdfstring{updateDifficultyLabel()}{updateDifficultyLabel()}}
+{\footnotesize\ttfamily \label{class_checkers_menu_a7ff906e4fbfef8fda2380f575f033357} 
+void Checkers\+Menu\+::update\+Difficulty\+Label (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates the displayed difficulty label based on difficulty\+Index. 
+
+Updates the difficulty label based on the current index. \Hypertarget{class_checkers_menu_a358321c67bc30cdd63107670147575a0}\index{CheckersMenu@{CheckersMenu}!updateGameMode@{updateGameMode}}
+\index{updateGameMode@{updateGameMode}!CheckersMenu@{CheckersMenu}}
+\doxysubsubsection{\texorpdfstring{updateGameMode}{updateGameMode}}
+{\footnotesize\ttfamily \label{class_checkers_menu_a358321c67bc30cdd63107670147575a0} 
+void Checkers\+Menu\+::update\+Game\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Updates the selected game mode based on radio button change. 
+
+Placeholder slot to react to game mode changes. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{checkersmenu_8h}{checkersmenu.\+h}}\item 
+\mbox{\hyperlink{checkersmenu_8cpp}{checkersmenu.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,159 @@
+\doxysection{Player Class Reference}
+\hypertarget{class_player}{}\label{class_player}\index{Player@{Player}}
+
+
+Represents a player in the Checkers game.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_a6b23b3cb0791de218a7c639f2f7eca30}{Player}} (const std\+::string \&player\+Name, QList$<$ \mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ player\+Pieces)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_player}{Player} with a name and a list of pieces. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for safe cleanup. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_player_a7585711bae8ed16cb7b0f99c02244ff1}{make\+Move}} (\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \&board, \mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece, std\+::pair$<$ int, int $>$ to\+Position)
+\begin{DoxyCompactList}\small\item\em Attempts to make a move with the given piece to the target position. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_player_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the player. \end{DoxyCompactList}\item 
+const QList$<$ \mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_player_a397baed60c051c0135e053cac2398acc}{get\+Pieces}} () const
+\begin{DoxyCompactList}\small\item\em Gets the list of pieces the player controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_af9c920fabaafdeb7961a645315b521ff}\label{class_player_af9c920fabaafdeb7961a645315b521ff} 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player}\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_a303498245b4eaa618c520dff60f5a251}\label{class_player_a303498245b4eaa618c520dff60f5a251} 
+QList$<$ \mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries pieces}
+\begin{DoxyCompactList}\small\item\em List of player\textquotesingle{}s pieces. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a player in the Checkers game. 
+
+Stores the player\textquotesingle{}s name and their pieces. Can make moves and acts as a base for AIPlayer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_player_a6b23b3cb0791de218a7c639f2f7eca30}\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily \label{class_player_a6b23b3cb0791de218a7c639f2f7eca30} 
+Player\+::\+Player (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{player\+Name}{, }\item[{QList$<$ \mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$}]{player\+Pieces}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_player}{Player} with a name and a list of pieces. 
+
+Constructs a \doxylink{class_player}{Player} with given name and piece list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Name} & Name of the player. \\
+\hline
+{\em player\+Pieces} & Pieces controlled by the player.\\
+\hline
+{\em player\+Name} & The player\textquotesingle{}s name. \\
+\hline
+{\em player\+Pieces} & The list of pieces assigned to the player. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_a749d2c00e1fe0f5c2746f7505a58c062}\index{Player@{Player}!````~Player@{\texorpdfstring{$\sim$}{\string~}Player}}
+\index{````~Player@{\texorpdfstring{$\sim$}{\string~}Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Player()}{\string~Player()}}
+{\footnotesize\ttfamily \label{class_player_a749d2c00e1fe0f5c2746f7505a58c062} 
+Player\+::\texorpdfstring{$\sim$}{\string~}\+Player (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for safe cleanup. 
+
+Virtual destructor — useful for cleanup in subclasses. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_a73e4ff2d70e62ca7e3be1d9b4ad9de85}\index{Player@{Player}!getName@{getName}}
+\index{getName@{getName}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_player_a73e4ff2d70e62ca7e3be1d9b4ad9de85} 
+std\+::string Player\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the player. 
+
+Returns the player\textquotesingle{}s name.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_player}{Player}\textquotesingle{}s name.
+
+Name of the player as a std\+::string. 
+\end{DoxyReturn}
+\Hypertarget{class_player_a397baed60c051c0135e053cac2398acc}\index{Player@{Player}!getPieces@{getPieces}}
+\index{getPieces@{getPieces}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getPieces()}{getPieces()}}
+{\footnotesize\ttfamily \label{class_player_a397baed60c051c0135e053cac2398acc} 
+const QList$<$ \mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \& Player\+::get\+Pieces (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the list of pieces the player controls. 
+
+Returns all pieces the player controls.
+
+\begin{DoxyReturn}{Returns}
+Const reference to list of pieces.
+
+Const reference to the player\textquotesingle{}s piece list. 
+\end{DoxyReturn}
+\Hypertarget{class_player_a7585711bae8ed16cb7b0f99c02244ff1}\index{Player@{Player}!makeMove@{makeMove}}
+\index{makeMove@{makeMove}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{makeMove()}{makeMove()}}
+{\footnotesize\ttfamily \label{class_player_a7585711bae8ed16cb7b0f99c02244ff1} 
+bool Player\+::make\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \&}]{board}{, }\item[{\mbox{\hyperlink{class_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece}{, }\item[{std\+::pair$<$ int, int $>$}]{to\+Position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Attempts to make a move with the given piece to the target position. 
+
+Moves a piece if the move is valid; also manages turn switching.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+{\em piece} & The piece to move. \\
+\hline
+{\em to\+Position} & The destination position as (row, col). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if move was successful.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The board where the move is being made. \\
+\hline
+{\em piece} & Pointer to the piece being moved. \\
+\hline
+{\em to\+Position} & The target row and column. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if move is successful; false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
+\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

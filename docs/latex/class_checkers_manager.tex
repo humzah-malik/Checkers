@@ -1,0 +1,218 @@
+\doxysection{Checkers\+Manager Class Reference}
+\hypertarget{class_checkers_manager}{}\label{class_checkers_manager}\index{CheckersManager@{CheckersManager}}
+
+
+Manages game state, player turns, \doxylink{class_a_i}{AI}, and undo logic.  
+
+
+
+
+{\ttfamily \#include $<$checkersmanager.\+h$>$}
+
+Inheritance diagram for Checkers\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_checkers_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_checkers_manager_a99516b6e2a1ff7194399e40f79b554b2}{on\+Start}} (int num\+Players, const QString \&difficulty, bool show\+Hints, bool sound\+Effect\+Enabled, bool ai\+Enabled)
+\begin{DoxyCompactList}\small\item\em Starts a new game with the given configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_manager_a6bb641936b5acc284be2a86b7f111f85}{make\+AIMove}} ()
+\begin{DoxyCompactList}\small\item\em Triggers the \doxylink{class_a_i}{AI} to make a move (Pv\+AI mode). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_manager_a9702bd3abc25f131ac1f5296987b23b9}{check\+Win\+Condition}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the current player has won the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_manager_a74a18f50e31b464d1f2ad7fe9f8d3dfa}{undo\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the last move, if allowed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_checkers_manager_ada936d5aea1829bb5a2de79669203d26}{undo\+Counts\+Updated}} (int red\+Left, int black\+Left)
+\begin{DoxyCompactList}\small\item\em Emitted when either player\textquotesingle{}s undo counts change. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_manager_a4ae58025936ec9282fb87922959bb819}{user\+Undo\+Count\+Updated}} (int remaining)
+\begin{DoxyCompactList}\small\item\em Emitted when user\textquotesingle{}s undo count changes (Pv\+AI mode). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_checkers_manager_a24aef9e3bff5d40daea4758f4864c0ab}{Checkers\+Manager}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor for the game manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_checkers_manager_afc8c86ab3df93b23d8ac2fc85a237b2f}{set\+Board}} (\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \texorpdfstring{$\ast$}{*}board)
+\begin{DoxyCompactList}\small\item\em Assigns the board instance to the manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_checkers_manager_aa172301276b087bd3bf9418635ba8a16}\label{class_checkers_manager_aa172301276b087bd3bf9418635ba8a16} 
+int {\bfseries red\+Undos\+Left} = 2
+\begin{DoxyCompactList}\small\item\em Remaining undos for Red player (PvP). \end{DoxyCompactList}\item 
+\Hypertarget{class_checkers_manager_a308860d7ea6b3ad27da06e65e5bcfe5f}\label{class_checkers_manager_a308860d7ea6b3ad27da06e65e5bcfe5f} 
+int {\bfseries black\+Undos\+Left} = 2
+\begin{DoxyCompactList}\small\item\em Remaining undos for Black player (PvP). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_checkers_manager_aa3f5ae9194d8840c9993b361635c0e1c}\label{class_checkers_manager_aa3f5ae9194d8840c9993b361635c0e1c} 
+\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \texorpdfstring{$\ast$}{*} {\bfseries board}
+\item 
+\Hypertarget{class_checkers_manager_a5bb196c0b0d803a31134d6a65bf8f76f}\label{class_checkers_manager_a5bb196c0b0d803a31134d6a65bf8f76f} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player1}
+\item 
+\Hypertarget{class_checkers_manager_aff642839f90a752849e242c03d3527f9}\label{class_checkers_manager_aff642839f90a752849e242c03d3527f9} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player2}
+\item 
+\Hypertarget{class_checkers_manager_a1bcee217ef60372cd9eb46c270bb49b5}\label{class_checkers_manager_a1bcee217ef60372cd9eb46c270bb49b5} 
+\mbox{\hyperlink{class_a_i}{AI}} \texorpdfstring{$\ast$}{*} {\bfseries ai\+Player}
+\item 
+\Hypertarget{class_checkers_manager_a1020fb93579e446feb3cecbc52e0fc62}\label{class_checkers_manager_a1020fb93579e446feb3cecbc52e0fc62} 
+bool {\bfseries game\+Over} = false
+\item 
+\Hypertarget{class_checkers_manager_aeb5e7b1cd067178d790f2428336f5daf}\label{class_checkers_manager_aeb5e7b1cd067178d790f2428336f5daf} 
+int {\bfseries user\+Undos\+Left} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages game state, player turns, \doxylink{class_a_i}{AI}, and undo logic. 
+
+Acts as the controller between the board, players, and UI triggers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_checkers_manager_a24aef9e3bff5d40daea4758f4864c0ab}\index{CheckersManager@{CheckersManager}!CheckersManager@{CheckersManager}}
+\index{CheckersManager@{CheckersManager}!CheckersManager@{CheckersManager}}
+\doxysubsubsection{\texorpdfstring{CheckersManager()}{CheckersManager()}}
+{\footnotesize\ttfamily \label{class_checkers_manager_a24aef9e3bff5d40daea4758f4864c0ab} 
+Checkers\+Manager\+::\+Checkers\+Manager (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for the game manager. 
+
+Constructor for \doxylink{class_checkers_manager}{Checkers\+Manager}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Optional Qt parent object.\\
+\hline
+\end{DoxyParams}
+Initializes the game\+Over flag. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_checkers_manager_a9702bd3abc25f131ac1f5296987b23b9}\index{CheckersManager@{CheckersManager}!checkWinCondition@{checkWinCondition}}
+\index{checkWinCondition@{checkWinCondition}!CheckersManager@{CheckersManager}}
+\doxysubsubsection{\texorpdfstring{checkWinCondition}{checkWinCondition}}
+{\footnotesize\ttfamily \label{class_checkers_manager_a9702bd3abc25f131ac1f5296987b23b9} 
+void Checkers\+Manager\+::check\+Win\+Condition (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Checks if the current player has won the game. 
+
+Checks the win condition for both sides.
+
+Considers valid moves and piece counts to detect win/stalemate/draw. \Hypertarget{class_checkers_manager_a6bb641936b5acc284be2a86b7f111f85}\index{CheckersManager@{CheckersManager}!makeAIMove@{makeAIMove}}
+\index{makeAIMove@{makeAIMove}!CheckersManager@{CheckersManager}}
+\doxysubsubsection{\texorpdfstring{makeAIMove}{makeAIMove}}
+{\footnotesize\ttfamily \label{class_checkers_manager_a6bb641936b5acc284be2a86b7f111f85} 
+void Checkers\+Manager\+::make\+AIMove (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Triggers the \doxylink{class_a_i}{AI} to make a move (Pv\+AI mode). 
+
+Makes the \doxylink{class_a_i}{AI} play a move if it\textquotesingle{}s its turn.
+
+Executes \doxylink{class_a_i}{AI} move using a delayed QTimer. \Hypertarget{class_checkers_manager_a99516b6e2a1ff7194399e40f79b554b2}\index{CheckersManager@{CheckersManager}!onStart@{onStart}}
+\index{onStart@{onStart}!CheckersManager@{CheckersManager}}
+\doxysubsubsection{\texorpdfstring{onStart}{onStart}}
+{\footnotesize\ttfamily \label{class_checkers_manager_a99516b6e2a1ff7194399e40f79b554b2} 
+void Checkers\+Manager\+::on\+Start (\begin{DoxyParamCaption}\item[{int}]{num\+Players}{, }\item[{const QString \&}]{difficulty}{, }\item[{bool}]{show\+Hints}{, }\item[{bool}]{sound\+Effect\+Enabled}{, }\item[{bool}]{ai\+Enabled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Starts a new game with the given configuration. 
+
+Starts a new game with provided settings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Players} & 1 = Pv\+AI, 2 = PvP. \\
+\hline
+{\em difficulty} & \doxylink{class_a_i}{AI} difficulty level ("{}\+Easy"{}, "{}\+Medium"{}, "{}\+Hard"{}). \\
+\hline
+{\em show\+Hints} & Whether to enable move hints. \\
+\hline
+{\em sound\+Effect\+Enabled} & Whether sound is enabled. \\
+\hline
+{\em ai\+Enabled} & Whether \doxylink{class_a_i}{AI} is enabled.\\
+\hline
+\end{DoxyParams}
+Connects board signals and initializes players or \doxylink{class_a_i}{AI} based on mode. \Hypertarget{class_checkers_manager_afc8c86ab3df93b23d8ac2fc85a237b2f}\index{CheckersManager@{CheckersManager}!setBoard@{setBoard}}
+\index{setBoard@{setBoard}!CheckersManager@{CheckersManager}}
+\doxysubsubsection{\texorpdfstring{setBoard()}{setBoard()}}
+{\footnotesize\ttfamily \label{class_checkers_manager_afc8c86ab3df93b23d8ac2fc85a237b2f} 
+void Checkers\+Manager\+::set\+Board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \texorpdfstring{$\ast$}{*}}]{board}{}\end{DoxyParamCaption})}
+
+
+
+Assigns the board instance to the manager. 
+
+Assigns the given board instance to the manager.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Pointer to an existing \doxylink{class_checkers_board}{Checkers\+Board}.\\
+\hline
+{\em board} & Pointer to a \doxylink{class_checkers_board}{Checkers\+Board} instance. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_checkers_manager_ada936d5aea1829bb5a2de79669203d26}\index{CheckersManager@{CheckersManager}!undoCountsUpdated@{undoCountsUpdated}}
+\index{undoCountsUpdated@{undoCountsUpdated}!CheckersManager@{CheckersManager}}
+\doxysubsubsection{\texorpdfstring{undoCountsUpdated}{undoCountsUpdated}}
+{\footnotesize\ttfamily \label{class_checkers_manager_ada936d5aea1829bb5a2de79669203d26} 
+void Checkers\+Manager\+::undo\+Counts\+Updated (\begin{DoxyParamCaption}\item[{int}]{red\+Left}{, }\item[{int}]{black\+Left}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when either player\textquotesingle{}s undo counts change. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em red\+Left} & Remaining undos for Red. \\
+\hline
+{\em black\+Left} & Remaining undos for Black. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_checkers_manager_a74a18f50e31b464d1f2ad7fe9f8d3dfa}\index{CheckersManager@{CheckersManager}!undoMove@{undoMove}}
+\index{undoMove@{undoMove}!CheckersManager@{CheckersManager}}
+\doxysubsubsection{\texorpdfstring{undoMove}{undoMove}}
+{\footnotesize\ttfamily \label{class_checkers_manager_a74a18f50e31b464d1f2ad7fe9f8d3dfa} 
+void Checkers\+Manager\+::undo\+Move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Undoes the last move, if allowed. 
+
+Undoes the last move or pair of moves, depending on mode.
+
+In Pv\+AI\+: undoes both \doxylink{class_a_i}{AI} and player move. In PvP\+: undo last two player moves. \Hypertarget{class_checkers_manager_a4ae58025936ec9282fb87922959bb819}\index{CheckersManager@{CheckersManager}!userUndoCountUpdated@{userUndoCountUpdated}}
+\index{userUndoCountUpdated@{userUndoCountUpdated}!CheckersManager@{CheckersManager}}
+\doxysubsubsection{\texorpdfstring{userUndoCountUpdated}{userUndoCountUpdated}}
+{\footnotesize\ttfamily \label{class_checkers_manager_a4ae58025936ec9282fb87922959bb819} 
+void Checkers\+Manager\+::user\+Undo\+Count\+Updated (\begin{DoxyParamCaption}\item[{int}]{remaining}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when user\textquotesingle{}s undo count changes (Pv\+AI mode). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em remaining} & Undos left for the user. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+checkersmanager.\+h\item 
+\mbox{\hyperlink{checkersmanager_8cpp}{checkersmanager.\+cpp}}\end{DoxyCompactItemize}

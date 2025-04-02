@@ -1,0 +1,26 @@
+\doxysection{mainwindow.\+cpp File Reference}
+\hypertarget{mainwindow_8cpp}{}\label{mainwindow_8cpp}\index{mainwindow.cpp@{mainwindow.cpp}}
+
+
+Implements the \doxylink{class_main_window}{Main\+Window} class which serves as the central hub for the game application.  
+
+
+{\ttfamily \#include $<$QApplication$>$}\newline
+{\ttfamily \#include $<$QVBox\+Layout$>$}\newline
+{\ttfamily \#include $<$QMessage\+Box$>$}\newline
+{\ttfamily \#include $<$QDebug$>$}\newline
+{\ttfamily \#include "{}mainwindow.\+h"{}}\newline
+{\ttfamily \#include "{}checkersmenu.\+h"{}}\newline
+{\ttfamily \#include "{}checkersmanager.\+h"{}}\newline
+{\ttfamily \#include "{}settingsdialog.\+h"{}}\newline
+{\ttfamily \#include "{}gamedescriptionpage.\+h"{}}\newline
+
+
+\doxysubsection{Detailed Description}
+Implements the \doxylink{class_main_window}{Main\+Window} class which serves as the central hub for the game application. 
+
+Handles layout switching via QStacked\+Widget, initializes UI pages, manages music and sound effects, connects signals for navigation, and launches the Checkers game logic. It supports both PvP and Pv\+AI modes, and integrates instructions, settings, and game description screens.
+
+\begin{DoxyAuthor}{Author}
+Humzah Zahid Malik, Lok Hui, Krish Bhavin Patel 
+\end{DoxyAuthor}

@@ -1,0 +1,177 @@
+\doxysection{Settings\+Dialog Class Reference}
+\hypertarget{class_settings_dialog}{}\label{class_settings_dialog}\index{SettingsDialog@{SettingsDialog}}
+
+
+Dialog for toggling background music and sound effects.  
+
+
+
+
+{\ttfamily \#include $<$settingsdialog.\+h$>$}
+
+Inheritance diagram for Settings\+Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_settings_dialog}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_settings_dialog_aaf5b97afb55a7d5e516c86a599cad267}{music\+Toggled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Signal emitted when music setting is toggled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_dialog_a89d1d1c04b6d21cdbaed3f489ad133a9}{sound\+Effects\+Toggled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Signal emitted when sound effects setting is toggled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_settings_dialog_a65f665b4f4a5eefac7388206addc4c25}{Settings\+Dialog}} (bool initial\+Music\+State, bool initial\+Sound\+Effects\+State, QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor for the settings dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_settings_dialog_a4a78127051bbd4162b6c03a04e0f332b}{on\+Music\+Checkbox\+State\+Changed}} (int state)
+\begin{DoxyCompactList}\small\item\em Slot for handling music checkbox state change. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_dialog_afe5ea75b24f7a13580492b647d080c61}{on\+Sound\+Effects\+Checkbox\+State\+Changed}} (int state)
+\begin{DoxyCompactList}\small\item\em Slot for handling sound effects checkbox state change. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_dialog_a20ba98dff60a58a8dd732eb4d061ea3f}{apply\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Applies the user\textquotesingle{}s selected settings and closes the dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_settings_dialog_a0f7f31409eede3457c887fbd2db6d77a}\label{class_settings_dialog_a0f7f31409eede3457c887fbd2db6d77a} 
+QCheck\+Box \texorpdfstring{$\ast$}{*} {\bfseries music\+Check\+Box}
+\item 
+\Hypertarget{class_settings_dialog_a21967469497deaa4bc6cb6e03f7e122d}\label{class_settings_dialog_a21967469497deaa4bc6cb6e03f7e122d} 
+QCheck\+Box \texorpdfstring{$\ast$}{*} {\bfseries sound\+Effects\+Check\+Box}
+\item 
+\Hypertarget{class_settings_dialog_ace0396cdfba9e6b7a0f5f2ea8a04db90}\label{class_settings_dialog_ace0396cdfba9e6b7a0f5f2ea8a04db90} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries apply\+Button}
+\item 
+\Hypertarget{class_settings_dialog_aa38e803dcdc55431d6cc296b74ff0872}\label{class_settings_dialog_aa38e803dcdc55431d6cc296b74ff0872} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries cancel\+Button}
+\item 
+\Hypertarget{class_settings_dialog_a5b0b8601d9a1409ee96e2a44112f6bb9}\label{class_settings_dialog_a5b0b8601d9a1409ee96e2a44112f6bb9} 
+bool {\bfseries current\+Music\+State}
+\item 
+\Hypertarget{class_settings_dialog_a90a0d72ad06016b386ebe936dacdf41f}\label{class_settings_dialog_a90a0d72ad06016b386ebe936dacdf41f} 
+bool {\bfseries current\+Sound\+Effects\+State}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Dialog for toggling background music and sound effects. 
+
+This dialog allows the player to enable or disable audio features. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_settings_dialog_a65f665b4f4a5eefac7388206addc4c25}\index{SettingsDialog@{SettingsDialog}!SettingsDialog@{SettingsDialog}}
+\index{SettingsDialog@{SettingsDialog}!SettingsDialog@{SettingsDialog}}
+\doxysubsubsection{\texorpdfstring{SettingsDialog()}{SettingsDialog()}}
+{\footnotesize\ttfamily \label{class_settings_dialog_a65f665b4f4a5eefac7388206addc4c25} 
+Settings\+Dialog\+::\+Settings\+Dialog (\begin{DoxyParamCaption}\item[{bool}]{initial\+Music\+State}{, }\item[{bool}]{initial\+Sound\+Effects\+State}{, }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for the settings dialog. 
+
+Constructs the Settings dialog.
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+Music\+State} & Initial state of background music toggle. \\
+\hline
+{\em initial\+Sound\+Effects\+State} & Initial state of sound effects toggle. \\
+\hline
+{\em parent} & Parent widget (usually \doxylink{class_main_window}{Main\+Window}).\\
+\hline
+{\em initial\+Music\+State} & Whether background music is initially enabled. \\
+\hline
+{\em initial\+Sound\+Effects\+State} & Whether sound effects are initially enabled. \\
+\hline
+{\em parent} & Parent widget (usually the main window). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_settings_dialog_a20ba98dff60a58a8dd732eb4d061ea3f}\index{SettingsDialog@{SettingsDialog}!applySettings@{applySettings}}
+\index{applySettings@{applySettings}!SettingsDialog@{SettingsDialog}}
+\doxysubsubsection{\texorpdfstring{applySettings}{applySettings}}
+{\footnotesize\ttfamily \label{class_settings_dialog_a20ba98dff60a58a8dd732eb4d061ea3f} 
+void Settings\+Dialog\+::apply\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Applies the user\textquotesingle{}s selected settings and closes the dialog. 
+
+Applies and emits the toggled settings, then closes the dialog. \Hypertarget{class_settings_dialog_aaf5b97afb55a7d5e516c86a599cad267}\index{SettingsDialog@{SettingsDialog}!musicToggled@{musicToggled}}
+\index{musicToggled@{musicToggled}!SettingsDialog@{SettingsDialog}}
+\doxysubsubsection{\texorpdfstring{musicToggled}{musicToggled}}
+{\footnotesize\ttfamily \label{class_settings_dialog_aaf5b97afb55a7d5e516c86a599cad267} 
+void Settings\+Dialog\+::music\+Toggled (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when music setting is toggled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & True if music should be enabled. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_settings_dialog_a4a78127051bbd4162b6c03a04e0f332b}\index{SettingsDialog@{SettingsDialog}!onMusicCheckboxStateChanged@{onMusicCheckboxStateChanged}}
+\index{onMusicCheckboxStateChanged@{onMusicCheckboxStateChanged}!SettingsDialog@{SettingsDialog}}
+\doxysubsubsection{\texorpdfstring{onMusicCheckboxStateChanged}{onMusicCheckboxStateChanged}}
+{\footnotesize\ttfamily \label{class_settings_dialog_a4a78127051bbd4162b6c03a04e0f332b} 
+void Settings\+Dialog\+::on\+Music\+Checkbox\+State\+Changed (\begin{DoxyParamCaption}\item[{int}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Slot for handling music checkbox state change. 
+
+Slot triggered when the music checkbox is toggled. Updates internal state but does not apply until "{}\+Apply"{} is pressed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & New checkbox state (Qt\+::\+Checked or Qt\+::\+Unchecked). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_settings_dialog_afe5ea75b24f7a13580492b647d080c61}\index{SettingsDialog@{SettingsDialog}!onSoundEffectsCheckboxStateChanged@{onSoundEffectsCheckboxStateChanged}}
+\index{onSoundEffectsCheckboxStateChanged@{onSoundEffectsCheckboxStateChanged}!SettingsDialog@{SettingsDialog}}
+\doxysubsubsection{\texorpdfstring{onSoundEffectsCheckboxStateChanged}{onSoundEffectsCheckboxStateChanged}}
+{\footnotesize\ttfamily \label{class_settings_dialog_afe5ea75b24f7a13580492b647d080c61} 
+void Settings\+Dialog\+::on\+Sound\+Effects\+Checkbox\+State\+Changed (\begin{DoxyParamCaption}\item[{int}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Slot for handling sound effects checkbox state change. 
+
+Slot triggered when the sound effects checkbox is toggled. Updates internal state but does not apply until "{}\+Apply"{} is pressed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & New checkbox state (Qt\+::\+Checked or Qt\+::\+Unchecked). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_settings_dialog_a89d1d1c04b6d21cdbaed3f489ad133a9}\index{SettingsDialog@{SettingsDialog}!soundEffectsToggled@{soundEffectsToggled}}
+\index{soundEffectsToggled@{soundEffectsToggled}!SettingsDialog@{SettingsDialog}}
+\doxysubsubsection{\texorpdfstring{soundEffectsToggled}{soundEffectsToggled}}
+{\footnotesize\ttfamily \label{class_settings_dialog_a89d1d1c04b6d21cdbaed3f489ad133a9} 
+void Settings\+Dialog\+::sound\+Effects\+Toggled (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when sound effects setting is toggled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & True if sound effects should be enabled. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{settingsdialog_8h}{settingsdialog.\+h}}\item 
+\mbox{\hyperlink{settingsdialog_8cpp}{settingsdialog.\+cpp}}\end{DoxyCompactItemize}

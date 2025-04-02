@@ -1,0 +1,42 @@
+\doxysection{checkersboard.\+h File Reference}
+\hypertarget{checkersboard_8h}{}\label{checkersboard_8h}\index{checkersboard.h@{checkersboard.h}}
+
+
+Implements the \doxylink{class_checkers_board}{Checkers\+Board} and \doxylink{class_board_square}{Board\+Square} classes for managing the checkers game UI and logic.  
+
+
+{\ttfamily \#include $<$QGraphics\+Rect\+Item$>$}\newline
+{\ttfamily \#include $<$QGraphics\+View$>$}\newline
+{\ttfamily \#include $<$QGraphics\+Scene\+Mouse\+Event$>$}\newline
+{\ttfamily \#include $<$QGraphics\+Item$>$}\newline
+{\ttfamily \#include $<$QGraphics\+Scene$>$}\newline
+{\ttfamily \#include $<$QList$>$}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+{\ttfamily \#include "{}piece.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_move_record}{Move\+Record}}
+\begin{DoxyCompactList}\small\item\em Stores a complete move history record for undo functionality. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_board_square}{Board\+Square}}
+\begin{DoxyCompactList}\small\item\em Represents an individual square on the checkers board. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_checkers_board}{Checkers\+Board}}
+\begin{DoxyCompactList}\small\item\em Manages the visual board and game logic for Checkers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{checkersboard_8h_aa7a2b8ea2c784a4ad8b58a3262bb4f07}\label{checkersboard_8h_aa7a2b8ea2c784a4ad8b58a3262bb4f07} 
+static const int {\bfseries BOARD\+\_\+\+SIZE} = 8
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the \doxylink{class_checkers_board}{Checkers\+Board} and \doxylink{class_board_square}{Board\+Square} classes for managing the checkers game UI and logic. 
+
+This file handles the visual representation of the checkers board, move validation, captures, king promotion, turn switching, highlighting valid moves, undo functionality, and win condition checking.
+
+It also defines \doxylink{class_board_square}{Board\+Square} for individual cells and manages user interactions via mouse clicks.
+
+\begin{DoxyAuthor}{Author}
+Lok Hui, Humzah Zahid Malik, Krish Bhavin Patel 
+\end{DoxyAuthor}

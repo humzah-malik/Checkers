@@ -1,0 +1,48 @@
+\doxysection{pvppage.\+h}
+\hypertarget{pvppage_8h_source}{}\label{pvppage_8h_source}\mbox{\hyperlink{pvppage_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ PVPPAGE\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ PVPPAGE\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QRadioButton>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QButtonGroup>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pv_p_page_a0c0e885615aae38c714ce2b060a25086}{PvPPage}}\ :\ \textcolor{keyword}{public}\ QWidget\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_pv_p_page_a0c0e885615aae38c714ce2b060a25086}{PvPPage}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ signals:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pv_p_page_af33e9a206005c31a8d9c2f5e7ffccbb8}{backToMenu}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pv_p_page_a2811d45bca96a9b7cbd465304ebc69aa}{startPvPGame}}(\textcolor{keywordtype}{int}\ mode);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pv_p_page_a20860a5367efc998ac5f2d6ed545c2d3}{settingsClicked}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pv_p_page_a88d3985e25df7b54e877b931cf92faa3}{onOneVOneClicked}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pv_p_page_a2be4c0ba13df9217669f5d49b166cb3e}{onFourPlayerClicked}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ QLabel\ *titleLabel;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Title\ at\ top\ of\ page}}
+\DoxyCodeLine{00066\ \ \ \ \ QPushButton\ *oneVOneButton;\ \ \ \ \ \textcolor{comment}{//\ Button\ for\ 2-\/player\ mode}}
+\DoxyCodeLine{00067\ \ \ \ \ QPushButton\ *fourPlayerButton;\ \ \textcolor{comment}{//\ Button\ for\ 4-\/player\ mode}}
+\DoxyCodeLine{00068\ \ \ \ \ QPushButton\ *backButton;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Back\ navigation\ button}}
+\DoxyCodeLine{00069\ \ \ \ \ QPushButton\ *exitButton;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Exit\ app\ button}}
+\DoxyCodeLine{00070\ \ \ \ \ QPushButton\ *settingsButton;\ \ \ \ \textcolor{comment}{//\ Opens\ settings\ dialog}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ QRadioButton\ *mode2RadioButton;\ \textcolor{comment}{//\ Optional\ radio\ for\ 2-\/player\ mode}}
+\DoxyCodeLine{00073\ \ \ \ \ QRadioButton\ *mode4RadioButton;\ \textcolor{comment}{//\ Optional\ radio\ for\ 4-\/player\ mode}}
+\DoxyCodeLine{00074\ \ \ \ \ QButtonGroup\ *modeButtonGroup;\ \ \textcolor{comment}{//\ Groups\ the\ mode\ radio\ buttons}}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PVPPAGE\_H}}
+
+\end{DoxyCode}

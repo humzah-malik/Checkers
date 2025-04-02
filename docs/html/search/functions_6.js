@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['gamedescriptionpage_0',['GameDescriptionPage',['../class_game_description_page.html#a8d4e13d84c6b78be89bef7a470f20a7a',1,'GameDescriptionPage']]],
+  ['gamepage_1',['GamePage',['../class_game_page.html#aa1eb008b302d758a8a2c74739887f800',1,'GamePage']]],
+  ['getaipieces_2',['getAIPieces',['../class_checkers_board.html#afc0f7653d7b8b9acf1d3c1fd1334ad82',1,'CheckersBoard']]],
+  ['getbestmove_3',['getBestMove',['../class_a_i.html#a5558ad2b6788e0000787571d5bd4a98e',1,'AI']]],
+  ['getbesttimedmove_4',['getBestTimedMove',['../class_mini_max_algo.html#acc6373b08b3b1458b291fa2d433d5d58',1,'MiniMaxAlgo']]],
+  ['getcol_5',['getCol',['../class_piece.html#a1c8b8d9e1fb77ea0d40ce42c7912317b',1,'Piece']]],
+  ['getcolor_6',['getColor',['../class_piece.html#a28039e50fc1ee702312717cba9d9378b',1,'Piece']]],
+  ['getcurrentturn_7',['getCurrentTurn',['../class_checkers_board.html#a0ade97688fc6fa02a6edfc5fc51bd254',1,'CheckersBoard']]],
+  ['getid_8',['getId',['../class_piece.html#ad67133f2d7563df69a0912c47ae0cc6f',1,'Piece']]],
+  ['getname_9',['getName',['../class_player.html#a73e4ff2d70e62ca7e3be1d9b4ad9de85',1,'Player']]],
+  ['getopponentpieces_10',['getOpponentPieces',['../class_checkers_board.html#a7a371e8f3dcba30ea2797c2eda2fe83c',1,'CheckersBoard']]],
+  ['getpieceat_11',['getPieceAt',['../class_checkers_board.html#aac730652c2d06adb1eb8a72f1512e322',1,'CheckersBoard']]],
+  ['getpiecebyid_12',['getPieceById',['../class_checkers_board.html#a96b3bfed1c5eea4de80593f855f0dc6c',1,'CheckersBoard']]],
+  ['getpieces_13',['getPieces',['../class_checkers_board.html#a725794e16d160d4e453b35dc2559458e',1,'CheckersBoard::getPieces()'],['../class_player.html#a397baed60c051c0135e053cac2398acc',1,'Player::getPieces()']]],
+  ['getrandommove_14',['getRandomMove',['../class_a_i.html#accecb96e294a2701e12d8c0ed1fb0b2b',1,'AI']]],
+  ['getrow_15',['getRow',['../class_piece.html#a0f53bbca2552fb2f6ea5307d9b4734fe',1,'Piece']]],
+  ['getselectedpiece_16',['getSelectedPiece',['../class_checkers_board.html#a2e7347a58fdce9a9c33441b563239f19',1,'CheckersBoard']]]
+];

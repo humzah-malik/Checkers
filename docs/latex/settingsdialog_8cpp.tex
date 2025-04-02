@@ -1,0 +1,22 @@
+\doxysection{settingsdialog.\+cpp File Reference}
+\hypertarget{settingsdialog_8cpp}{}\label{settingsdialog_8cpp}\index{settingsdialog.cpp@{settingsdialog.cpp}}
+
+
+Implements the in-\/game Settings dialog for toggling music and sound effects.  
+
+
+{\ttfamily \#include "{}settingsdialog.\+h"{}}\newline
+{\ttfamily \#include $<$QHBox\+Layout$>$}\newline
+{\ttfamily \#include $<$QVBox\+Layout$>$}\newline
+{\ttfamily \#include $<$QSound\+Effect$>$}\newline
+{\ttfamily \#include "{}mainwindow.\+h"{}}\newline
+
+
+\doxysubsection{Detailed Description}
+Implements the in-\/game Settings dialog for toggling music and sound effects. 
+
+Provides checkboxes for enabling/disabling background music and sound effects. Changes are only applied after pressing the "{}\+Apply"{} button. Also includes a cancel option to discard changes. Integrates sound feedback using \doxylink{class_main_window}{Main\+Window}\textquotesingle{}s sound system.
+
+\begin{DoxyAuthor}{Author}
+Krish Bhavin Patel 
+\end{DoxyAuthor}

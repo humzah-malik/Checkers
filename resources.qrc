@@ -1,0 +1,13 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file>sounds/background_music.mp3</file>
+        <file>sounds/piece_move.wav</file>
+        <file>sounds/piece_capture.wav</file>
+        <file>sounds/king_promotion.wav</file>
+        <file>sounds/turn_change.wav</file>
+        <file>sounds/game_end.wav</file>
+        <file>sounds/select.wav</file>
+        <file>Fonts/RussoOne-Regular.ttf</file>
+    </qresource>
+</RCC> 

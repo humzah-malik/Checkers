@@ -1,0 +1,107 @@
+\doxysection{checkersboard.\+h}
+\hypertarget{checkersboard_8h_source}{}\label{checkersboard_8h_source}\mbox{\hyperlink{checkersboard_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ CHECKERSBOARD\_H}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ CHECKERSBOARD\_H}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QGraphicsRectItem>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QGraphicsView>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QGraphicsSceneMouseEvent>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QGraphicsItem>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QGraphicsScene>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{piece_8h}{piece.h}}"{}}\ \ \textcolor{comment}{//\ Defines\ Piece\ and\ PieceColor}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_move_record}{MoveRecord}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ pieceId;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ oldRow,\ oldCol;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ newRow,\ newCol;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ wasPromoted;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ captureOccurred;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ capturedPieceId;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ capturedRow,\ capturedCol;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ capturedWasKing;}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ capturedColor;}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ BOARD\_SIZE\ =\ 8;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_board_square_a9b5af1b522ad8bbef80962c6e3a2b714}{BoardSquare}}\ :\ \textcolor{keyword}{public}\ QGraphicsRectItem\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_board_square_a9b5af1b522ad8bbef80962c6e3a2b714}{BoardSquare}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ qreal\ x,\ qreal\ y,\ qreal\ w,\ qreal\ h,\ QGraphicsItem\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ getRow()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ the\ row\ index\ of\ the\ square.}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ getCol()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ the\ column\ index\ of\ the\ square.}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ resetColor();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Resets\ square\ color\ to\ default.}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ mousePressEvent(QGraphicsSceneMouseEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_row;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Row\ index\ of\ the\ square.}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_col;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Column\ index\ of\ the\ square.}}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{class\ }CheckersBoard\ :\ \textcolor{keyword}{public}\ QGraphicsView\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{explicit}\ CheckersBoard(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});\ \ \ \ \ \ \textcolor{comment}{//\ Main\ constructor.}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ CheckersBoard\ *\mbox{\hyperlink{class_checkers_board_ac42b8820a916d420b0cab893e791f95b}{clone}}()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clones\ the\ board\ state.}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{class_piece}{Piece}}*\ \mbox{\hyperlink{class_checkers_board_aac730652c2d06adb1eb8a72f1512e322}{getPieceAt}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ piece\ at\ a\ specific\ location.}}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{class_piece}{Piece}}*\ \mbox{\hyperlink{class_checkers_board_a96b3bfed1c5eea4de80593f855f0dc6c}{getPieceById}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Finds\ a\ piece\ by\ its\ ID.}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_board_acff4610d3be5a35080d0f5eede4b59bc}{handleMove}}(\mbox{\hyperlink{class_piece}{Piece}}\ *piece,\ \textcolor{keywordtype}{int}\ newRow,\ \textcolor{keywordtype}{int}\ newCol);\ \ \textcolor{comment}{//\ Moves\ a\ piece\ and\ updates\ state.}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_checkers_board_a622c16486cad2252794901317ffea0cf}{isValidMove}}(\mbox{\hyperlink{class_piece}{Piece}}\ *piece,\ \textcolor{keywordtype}{int}\ newRow,\ \textcolor{keywordtype}{int}\ newCol);\ \textcolor{comment}{//\ Checks\ if\ a\ move\ is\ legal.}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_checkers_board_ab38a322fc04b5f780f6ac11cb06b6b3c}{isAnyCaptureAvailable}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Checks\ if\ any\ piece\ has\ a\ capture.}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_checkers_board_a71bde7360f5157d6f4423a9f020f16f4}{hasValidMoves}}(\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ color);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Checks\ if\ a\ color\ has\ any\ valid\ moves.}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_checkers_board_a1da164397c0957ece0a0a9b1834d69b1}{isCaptureAvailable}}(\mbox{\hyperlink{class_piece}{Piece}}\ *piece);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Checks\ if\ a\ capture\ is\ possible\ for\ a\ piece.}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_checkers_board_aecbe69bac40bf90b8b48b5dec81aef40}{isCaptureMove}}(\mbox{\hyperlink{class_piece}{Piece}}\ *piece,\ \textcolor{keywordtype}{int}\ newRow,\ \textcolor{keywordtype}{int}\ newCol);\ \textcolor{comment}{//\ Checks\ if\ a\ move\ is\ a\ capturing\ move.}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_board_af160f97a34cc2010eda3af8e0f97da4f}{setSelectedPiece}}(\mbox{\hyperlink{class_piece}{Piece}}\ *piece);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Updates\ the\ currently\ selected\ piece.}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_board_a328e3100f9c7bab7e8c4dbe817648e31}{switchTurn}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Switches\ the\ current\ turn.}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_board_a7d8e91ab88ce0a28da059a669112388a}{forceTurn}}(\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ color);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Forcefully\ sets\ the\ current\ turn.}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{class_piece}{Piece}}\ *\mbox{\hyperlink{class_checkers_board_a2e7347a58fdce9a9c33441b563239f19}{getSelectedPiece}}()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Gets\ the\ selected\ piece.}}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ \mbox{\hyperlink{class_checkers_board_a0ade97688fc6fa02a6edfc5fc51bd254}{getCurrentTurn}}()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Gets\ whose\ turn\ it\ is.}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_checkers_board_aaba87df1f98369aefdb70e1294d89a03}{checkwin}}(\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ color);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Checks\ if\ a\ color\ has\ won.}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ QList<Piece*>\ \mbox{\hyperlink{class_checkers_board_a725794e16d160d4e453b35dc2559458e}{getPieces}}(\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ color);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ all\ pieces\ of\ a\ given\ color.}}
+\DoxyCodeLine{00098\ \ \ \ \ QList<Piece*>\ \mbox{\hyperlink{class_checkers_board_afc0f7653d7b8b9acf1d3c1fd1334ad82}{getAIPieces}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ AI\ pieces.}}
+\DoxyCodeLine{00099\ \ \ \ \ QList<Piece*>\ \mbox{\hyperlink{class_checkers_board_a7a371e8f3dcba30ea2797c2eda2fe83c}{getOpponentPieces}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ pieces\ of\ the\ non-\/current\ turn.}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_board_a8df962c4cb76a2544ebfad5960ef9e1b}{undoLastMove}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Undoes\ the\ most\ recent\ move.}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_board_a3729576350fc75f7252c687e293e645d}{highlightValidMoves}}(\mbox{\hyperlink{class_piece}{Piece}}*\ piece);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Highlights\ valid\ squares\ for\ a\ given\ piece.}}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_board_ae2ca0dc32c50536b44f2ae230d1f4dac}{clearHighlightedSquares}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clears\ highlighted\ squares.}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ signals:}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ moveCompleted();\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Emitted\ when\ a\ move\ is\ completed.}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ gameCheck();\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Emitted\ when\ a\ check\ state\ occurs.}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ turnChanged(\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ newTurn);\ \textcolor{comment}{//\ Emitted\ when\ the\ turn\ changes.}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ pieceCaptured();\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Emitted\ when\ a\ piece\ is\ captured.}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ piecePromoted();\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Emitted\ when\ a\ piece\ is\ promoted.}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ gameEnded();\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Emitted\ when\ the\ game\ ends.}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00114\ \ \ \ \ QGraphicsScene\ *m\_scene;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Graphics\ scene\ for\ rendering.}}
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{class_piece}{Piece}}\ *selectedPiece;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Currently\ selected\ piece.}}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ currentTurn\ =\ PieceColor::Black;\ \textcolor{comment}{//\ Whose\ turn\ it\ is.}}
+\DoxyCodeLine{00117\ \ \ \ \ std::stack<MoveRecord>\ moveHistory;\ \ \ \ \ \textcolor{comment}{//\ Stack\ for\ undo\ functionality.}}
+\DoxyCodeLine{00118\ \ \ \ \ QList<BoardSquare*>\ m\_highlightedSquares;\textcolor{comment}{//\ Squares\ currently\ highlighted.}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_captureMade\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flag\ if\ a\ capture\ was\ made.}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_checkers_board_a0f68ab2f8a3c556f2c3a332b45fa6e74}{isPiecesTurn}}(\mbox{\hyperlink{class_piece}{Piece}}*\ piece);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_board_a4b79041621c85b394d70cbe307079cd6}{initializeBoard}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sets\ up\ the\ board\ squares.}}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_board_a9619c18c616c658359ebd63dad7bef76}{initializePieces}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Places\ the\ pieces\ on\ the\ board.}}
+\DoxyCodeLine{00128\ \};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CHECKERSBOARD\_H}}
+
+\end{DoxyCode}

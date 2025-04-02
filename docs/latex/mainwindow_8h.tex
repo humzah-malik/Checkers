@@ -1,0 +1,39 @@
+\doxysection{mainwindow.\+h File Reference}
+\hypertarget{mainwindow_8h}{}\label{mainwindow_8h}\index{mainwindow.h@{mainwindow.h}}
+
+
+Implements the \doxylink{class_main_window}{Main\+Window} class which serves as the central hub for the game application.  
+
+
+{\ttfamily \#include $<$QWidget$>$}\newline
+{\ttfamily \#include $<$QStacked\+Widget$>$}\newline
+{\ttfamily \#include $<$QMedia\+Player$>$}\newline
+{\ttfamily \#include $<$QAudio\+Output$>$}\newline
+{\ttfamily \#include $<$QMap$>$}\newline
+{\ttfamily \#include $<$QSound\+Effect$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include "{}checkersmenu.\+h"{}}\newline
+{\ttfamily \#include "{}checkersmanager.\+h"{}}\newline
+{\ttfamily \#include "{}gamepage.\+h"{}}\newline
+{\ttfamily \#include "{}frontpage.\+h"{}}\newline
+{\ttfamily \#include "{}pvppage.\+h"{}}\newline
+{\ttfamily \#include "{}pvaipage.\+h"{}}\newline
+{\ttfamily \#include "{}instructionspage.\+h"{}}\newline
+{\ttfamily \#include "{}settingsdialog.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_main_window}{Main\+Window}}
+\begin{DoxyCompactList}\small\item\em Central controller for all major screens and game states in the application. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_main_window_1_1_game_entry}{Main\+Window\+::\+Game\+Entry}}
+\begin{DoxyCompactList}\small\item\em Struct defining a registered game type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the \doxylink{class_main_window}{Main\+Window} class which serves as the central hub for the game application. 
+
+Handles layout switching via QStacked\+Widget, initializes UI pages, manages music and sound effects, connects signals for navigation, and launches the Checkers game logic. It supports both PvP and Pv\+AI modes, and integrates instructions, settings, and game description screens.
+
+\begin{DoxyAuthor}{Author}
+Humzah Zahid Malik, Lok Hui, Krish Bhavin Patel 
+\end{DoxyAuthor}

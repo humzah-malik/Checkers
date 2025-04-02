@@ -1,0 +1,141 @@
+\doxysection{Pv\+PPage Class Reference}
+\hypertarget{class_pv_p_page}{}\label{class_pv_p_page}\index{PvPPage@{PvPPage}}
+
+
+UI page for selecting \doxylink{class_player}{Player} vs \doxylink{class_player}{Player} (PvP) game mode.  
+
+
+
+
+{\ttfamily \#include $<$pvppage.\+h$>$}
+
+Inheritance diagram for Pv\+PPage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pv_p_page}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_pv_p_page_af33e9a206005c31a8d9c2f5e7ffccbb8}\label{class_pv_p_page_af33e9a206005c31a8d9c2f5e7ffccbb8} 
+void {\bfseries back\+To\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Emitted when user wants to return to main menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pv_p_page_a2811d45bca96a9b7cbd465304ebc69aa}{start\+Pv\+PGame}} (int mode)
+\begin{DoxyCompactList}\small\item\em Emitted when user starts a PvP game. \end{DoxyCompactList}\item 
+\Hypertarget{class_pv_p_page_a20860a5367efc998ac5f2d6ed545c2d3}\label{class_pv_p_page_a20860a5367efc998ac5f2d6ed545c2d3} 
+void {\bfseries settings\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Emitted when settings button is clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pv_p_page_a0c0e885615aae38c714ce2b060a25086}{Pv\+PPage}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor that sets up the PvP game mode selection UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pv_p_page_a88d3985e25df7b54e877b931cf92faa3}{on\+One\+VOne\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em Called when 1v1 button is clicked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pv_p_page_a2be4c0ba13df9217669f5d49b166cb3e}{on\+Four\+Player\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em Called when 4-\/player button is clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_pv_p_page_a7d0cf7cd27050738597012bc6db35ad9}\label{class_pv_p_page_a7d0cf7cd27050738597012bc6db35ad9} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries title\+Label}
+\item 
+\Hypertarget{class_pv_p_page_ae0c692b64bd02439797977e099db8b31}\label{class_pv_p_page_ae0c692b64bd02439797977e099db8b31} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries one\+VOne\+Button}
+\item 
+\Hypertarget{class_pv_p_page_af451657d04e551a9636be8fa9a813159}\label{class_pv_p_page_af451657d04e551a9636be8fa9a813159} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries four\+Player\+Button}
+\item 
+\Hypertarget{class_pv_p_page_a8d64cd7802720b428952f7aefefddf74}\label{class_pv_p_page_a8d64cd7802720b428952f7aefefddf74} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries back\+Button}
+\item 
+\Hypertarget{class_pv_p_page_ad612a78965dfeebc6d9b34b2226004f5}\label{class_pv_p_page_ad612a78965dfeebc6d9b34b2226004f5} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries exit\+Button}
+\item 
+\Hypertarget{class_pv_p_page_a8786ba728bed793a51b8eea6880bbd81}\label{class_pv_p_page_a8786ba728bed793a51b8eea6880bbd81} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries settings\+Button}
+\item 
+\Hypertarget{class_pv_p_page_a15c037cbfd2ba1dcd43073abc0f046de}\label{class_pv_p_page_a15c037cbfd2ba1dcd43073abc0f046de} 
+QRadio\+Button \texorpdfstring{$\ast$}{*} {\bfseries mode2\+Radio\+Button}
+\item 
+\Hypertarget{class_pv_p_page_a44996cc9cdf49d421f29546ad8aa5153}\label{class_pv_p_page_a44996cc9cdf49d421f29546ad8aa5153} 
+QRadio\+Button \texorpdfstring{$\ast$}{*} {\bfseries mode4\+Radio\+Button}
+\item 
+\Hypertarget{class_pv_p_page_a789f3e33737f46e3ec46623b9f212610}\label{class_pv_p_page_a789f3e33737f46e3ec46623b9f212610} 
+QButton\+Group \texorpdfstring{$\ast$}{*} {\bfseries mode\+Button\+Group}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+UI page for selecting \doxylink{class_player}{Player} vs \doxylink{class_player}{Player} (PvP) game mode. 
+
+Allows the user to choose between 2-\/player and 4-\/player modes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pv_p_page_a0c0e885615aae38c714ce2b060a25086}\index{PvPPage@{PvPPage}!PvPPage@{PvPPage}}
+\index{PvPPage@{PvPPage}!PvPPage@{PvPPage}}
+\doxysubsubsection{\texorpdfstring{PvPPage()}{PvPPage()}}
+{\footnotesize\ttfamily \label{class_pv_p_page_a0c0e885615aae38c714ce2b060a25086} 
+Pv\+PPage\+::\+Pv\+PPage (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor that sets up the PvP game mode selection UI. 
+
+Constructs the PvP mode selection page.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent widget.\\
+\hline
+{\em parent} & Parent widget \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pv_p_page_a2be4c0ba13df9217669f5d49b166cb3e}\index{PvPPage@{PvPPage}!onFourPlayerClicked@{onFourPlayerClicked}}
+\index{onFourPlayerClicked@{onFourPlayerClicked}!PvPPage@{PvPPage}}
+\doxysubsubsection{\texorpdfstring{onFourPlayerClicked}{onFourPlayerClicked}}
+{\footnotesize\ttfamily \label{class_pv_p_page_a2be4c0ba13df9217669f5d49b166cb3e} 
+void Pv\+PPage\+::on\+Four\+Player\+Clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Called when 4-\/player button is clicked. 
+
+Handles click on 4-\/player button (not currently used, logic in lambda). \Hypertarget{class_pv_p_page_a88d3985e25df7b54e877b931cf92faa3}\index{PvPPage@{PvPPage}!onOneVOneClicked@{onOneVOneClicked}}
+\index{onOneVOneClicked@{onOneVOneClicked}!PvPPage@{PvPPage}}
+\doxysubsubsection{\texorpdfstring{onOneVOneClicked}{onOneVOneClicked}}
+{\footnotesize\ttfamily \label{class_pv_p_page_a88d3985e25df7b54e877b931cf92faa3} 
+void Pv\+PPage\+::on\+One\+VOne\+Clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Called when 1v1 button is clicked. 
+
+Handles click on 1v1 button (not currently used, logic in lambda). \Hypertarget{class_pv_p_page_a2811d45bca96a9b7cbd465304ebc69aa}\index{PvPPage@{PvPPage}!startPvPGame@{startPvPGame}}
+\index{startPvPGame@{startPvPGame}!PvPPage@{PvPPage}}
+\doxysubsubsection{\texorpdfstring{startPvPGame}{startPvPGame}}
+{\footnotesize\ttfamily \label{class_pv_p_page_a2811d45bca96a9b7cbd465304ebc69aa} 
+void Pv\+PPage\+::start\+Pv\+PGame (\begin{DoxyParamCaption}\item[{int}]{mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when user starts a PvP game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & 2 = 2-\/player mode, 4 = 4-\/player mode. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{pvppage_8h}{pvppage.\+h}}\item 
+\mbox{\hyperlink{pvppage_8cpp}{pvppage.\+cpp}}\end{DoxyCompactItemize}

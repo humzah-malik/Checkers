@@ -1,0 +1,166 @@
+\doxysection{Main\+Window Class Reference}
+\hypertarget{class_main_window}{}\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+Central controller for all major screens and game states in the application.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_main_window_1_1_game_entry}{Game\+Entry}}
+\begin{DoxyCompactList}\small\item\em Struct defining a registered game type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs the main window controller. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a561d7653a2d8774384580a37fca2a75f}\label{class_main_window_a561d7653a2d8774384580a37fca2a75f} 
+void {\bfseries play\+Select\+Sound} ()
+\begin{DoxyCompactList}\small\item\em Plays UI selection sound (e.\+g., button clicks). \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_ad423bcd522a8c55a61ee3aa91a603d58}\label{class_main_window_ad423bcd522a8c55a61ee3aa91a603d58} 
+void {\bfseries show\+Game\+Description\+Page} ()
+\begin{DoxyCompactList}\small\item\em Displays a scrollable page with game instructions and rules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_window_a3677607a35200e535b6cde1f2cfe2e23}\label{class_main_window_a3677607a35200e535b6cde1f2cfe2e23} 
+void {\bfseries on\+Start\+Game} (int num\+Players, const QString \&difficulty, bool show\+Hints, bool sound\+Enabled, bool ai\+Enable)
+\begin{DoxyCompactList}\small\item\em Starts a new game with the provided configuration. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_aef3ef652bc233146331ad5bef3f3cbb2}\label{class_main_window_aef3ef652bc233146331ad5bef3f3cbb2} 
+void {\bfseries on\+Back\+To\+Front\+Page} ()
+\begin{DoxyCompactList}\small\item\em Switches back to the front landing page. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a4d69f198c08931b23317adfb40b7c92a}\label{class_main_window_a4d69f198c08931b23317adfb40b7c92a} 
+void {\bfseries on\+Back\+To\+Game\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Returns to the current game’s menu screen. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_aab6ca9db2cbb0e8ed2d45db3fc5641f5}\label{class_main_window_aab6ca9db2cbb0e8ed2d45db3fc5641f5} 
+void {\bfseries on\+Exit\+App} ()
+\begin{DoxyCompactList}\small\item\em Quits the application cleanly. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a00959caaeb848df7b5cecbe77fa620ec}\label{class_main_window_a00959caaeb848df7b5cecbe77fa620ec} 
+void {\bfseries show\+Checkers\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Displays the main menu for the currently selected game. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a568015636fcab9f35f3d0482e91562ce}\label{class_main_window_a568015636fcab9f35f3d0482e91562ce} 
+void {\bfseries show\+Pv\+PPage} ()
+\begin{DoxyCompactList}\small\item\em Shows the \doxylink{class_player}{Player} vs \doxylink{class_player}{Player} setup screen. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a26566a567aa351741ffc26db4b01522d}\label{class_main_window_a26566a567aa351741ffc26db4b01522d} 
+void {\bfseries show\+Pv\+AIPage} ()
+\begin{DoxyCompactList}\small\item\em Shows the \doxylink{class_player}{Player} vs \doxylink{class_a_i}{AI} setup screen. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_ac20c62334153203fd1d6fe56909ac078}\label{class_main_window_ac20c62334153203fd1d6fe56909ac078} 
+void {\bfseries show\+Instructions\+Page} ()
+\begin{DoxyCompactList}\small\item\em Shows the How-\/\+To-\/\+Play instructions screen. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_aae6fca90e8369aa6745e9ad6c66e25e0}\label{class_main_window_aae6fca90e8369aa6745e9ad6c66e25e0} 
+void {\bfseries open\+Settings\+Dialog} ()
+\begin{DoxyCompactList}\small\item\em Opens the in-\/game settings dialog for toggling music and sound. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a207ce6f610f2082affa69f96bc17eec6}\label{class_main_window_a207ce6f610f2082affa69f96bc17eec6} 
+void {\bfseries toggle\+Music} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enables or mutes background music. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a2e213f512dd5f31a1f1832b892afecdc}\label{class_main_window_a2e213f512dd5f31a1f1832b892afecdc} 
+void {\bfseries toggle\+Sound\+Effects} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enables or disables sound effects. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a5f22edf61a3c54bfc94c8f4cbf9fdd27}\label{class_main_window_a5f22edf61a3c54bfc94c8f4cbf9fdd27} 
+void {\bfseries play\+Piece\+Move\+Sound} ()
+\begin{DoxyCompactList}\small\item\em Plays move sound if enabled. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_af5027ada7729fadafcd2c8be89937fc5}\label{class_main_window_af5027ada7729fadafcd2c8be89937fc5} 
+void {\bfseries play\+Piece\+Capture\+Sound} ()
+\begin{DoxyCompactList}\small\item\em Plays capture sound if enabled. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a815c5efbe1b6c0b0659347cd0230da4d}\label{class_main_window_a815c5efbe1b6c0b0659347cd0230da4d} 
+void {\bfseries play\+King\+Promotion\+Sound} ()
+\begin{DoxyCompactList}\small\item\em Plays king promotion sound if enabled. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a94550427a0abacaa3e030103565e39d4}\label{class_main_window_a94550427a0abacaa3e030103565e39d4} 
+void {\bfseries play\+Turn\+Change\+Sound} ()
+\begin{DoxyCompactList}\small\item\em Plays turn change sound if enabled. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a43bf59ae8075ca2b91ac048c1779bc8c}\label{class_main_window_a43bf59ae8075ca2b91ac048c1779bc8c} 
+void {\bfseries play\+Game\+End\+Sound} ()
+\begin{DoxyCompactList}\small\item\em Plays game over sound if enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_window_a5130858e22c0d23207c3c51eabc5a9f7}\label{class_main_window_a5130858e22c0d23207c3c51eabc5a9f7} 
+void {\bfseries register\+Games} ()
+\begin{DoxyCompactList}\small\item\em Registers available games into the internal game registry. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a720487ef44846ef6b16974f1ab61d5eb}\label{class_main_window_a720487ef44846ef6b16974f1ab61d5eb} 
+void {\bfseries initialize\+Sound\+Effects} ()
+\begin{DoxyCompactList}\small\item\em Loads all required sound effects from the Qt resource system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_window_acbd64c340f85d1980cb294f9a9364247}\label{class_main_window_acbd64c340f85d1980cb294f9a9364247} 
+QMap$<$ QString, \mbox{\hyperlink{struct_main_window_1_1_game_entry}{Game\+Entry}} $>$ {\bfseries game\+Registry}
+\item 
+\Hypertarget{class_main_window_ac330f502cff67edd46b406542394fa20}\label{class_main_window_ac330f502cff67edd46b406542394fa20} 
+QString {\bfseries current\+Game\+Key}
+\item 
+\Hypertarget{class_main_window_ad1eef01717c9576331c392e772ce0e8b}\label{class_main_window_ad1eef01717c9576331c392e772ce0e8b} 
+QStacked\+Widget \texorpdfstring{$\ast$}{*} {\bfseries stack}
+\item 
+\Hypertarget{class_main_window_ab99feb8ae3cf9937f2ff8e43c1cc8539}\label{class_main_window_ab99feb8ae3cf9937f2ff8e43c1cc8539} 
+\mbox{\hyperlink{class_front_page}{Front\+Page}} \texorpdfstring{$\ast$}{*} {\bfseries front\+Page}
+\item 
+\Hypertarget{class_main_window_a5a27ad3a1a68cf316c234ff2f0888580}\label{class_main_window_a5a27ad3a1a68cf316c234ff2f0888580} 
+QWidget \texorpdfstring{$\ast$}{*} {\bfseries current\+Menu} = nullptr
+\item 
+\Hypertarget{class_main_window_ae0cb81938318a572b7594bca66b9023c}\label{class_main_window_ae0cb81938318a572b7594bca66b9023c} 
+QWidget \texorpdfstring{$\ast$}{*} {\bfseries current\+Game\+Widget} = nullptr
+\item 
+\Hypertarget{class_main_window_aa88358be8d79132249fd7336e78b76c9}\label{class_main_window_aa88358be8d79132249fd7336e78b76c9} 
+\mbox{\hyperlink{class_game_page}{Game\+Page}} \texorpdfstring{$\ast$}{*} {\bfseries active\+Game\+Page} = nullptr
+\item 
+\Hypertarget{class_main_window_a4c58e024a8bbca82e2a89c0f66703328}\label{class_main_window_a4c58e024a8bbca82e2a89c0f66703328} 
+QObject \texorpdfstring{$\ast$}{*} {\bfseries game\+Manager} = nullptr
+\item 
+\Hypertarget{class_main_window_ac3fb6e546e5086428c9a536efeef5609}\label{class_main_window_ac3fb6e546e5086428c9a536efeef5609} 
+QMedia\+Player \texorpdfstring{$\ast$}{*} {\bfseries background\+Music\+Player}
+\item 
+\Hypertarget{class_main_window_ac160427973e2abbce709b5f37fc4d059}\label{class_main_window_ac160427973e2abbce709b5f37fc4d059} 
+QAudio\+Output \texorpdfstring{$\ast$}{*} {\bfseries audio\+Output}
+\item 
+\Hypertarget{class_main_window_acfa48161f469c170c6521d3f12ac6f8c}\label{class_main_window_acfa48161f469c170c6521d3f12ac6f8c} 
+bool {\bfseries is\+Music\+Enabled} = true
+\item 
+\Hypertarget{class_main_window_a8397cc8a34be2d1383192f5f5e003468}\label{class_main_window_a8397cc8a34be2d1383192f5f5e003468} 
+QMap$<$ QString, QSound\+Effect \texorpdfstring{$\ast$}{*} $>$ {\bfseries sound\+Effects}
+\item 
+\Hypertarget{class_main_window_a6e62a155325bbc9400fb34f554be0762}\label{class_main_window_a6e62a155325bbc9400fb34f554be0762} 
+bool {\bfseries is\+Sound\+Effects\+Enabled} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Central controller for all major screens and game states in the application. 
+
+Manages screen transitions using QStacked\+Widget, launches games dynamically, and handles global settings like sound and music. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily \label{class_main_window_a996c5a2b6f77944776856f08ec30858d} 
+Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs the main window controller. 
+
+Constructs the main window, initializes UI, front page, music, and sound effects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Optional QWidget parent.\\
+\hline
+\end{DoxyParams}
+This is the central controller for the application. It sets up the main stack, connects the front page actions, initializes audio, and registers game types. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+\mbox{\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}}\end{DoxyCompactItemize}

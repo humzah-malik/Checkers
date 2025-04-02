@@ -1,0 +1,33 @@
+\doxysection{Mini\+Max\+Algo.\+h}
+\hypertarget{_mini_max_algo_8h_source}{}\label{_mini_max_algo_8h_source}\mbox{\hyperlink{_mini_max_algo_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ MINIMAXALGO\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MINIMAXALGO\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{checkersboard_8h}{checkersboard.h}}"{}}\ \ \textcolor{comment}{//\ Use\ CheckersBoard\ instead\ of\ Board}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{piece_8h}{piece.h}}"{}}\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Include\ Piece\ class}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <tuple>}\ \textcolor{comment}{//\ for\ std::tuple}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mini_max_algo_a02215585b96ea4eba1e4925713787bee}{MiniMaxAlgo}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_mini_max_algo_af44d108a57699f2f2c574fdb438badad}{maxDepth}};\ \ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_mini_max_algo_a02215585b96ea4eba1e4925713787bee}{MiniMaxAlgo}}(\textcolor{keywordtype}{int}\ depth);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_mini_max_algo_a48fe1661c6caaa39d397c45dccd27824}{evaluateBoard}}(\mbox{\hyperlink{class_checkers_board}{CheckersBoard}}\&\ board);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00053\ \ \ \ \ std::pair<int,\ std::tuple<int,\ int,\ int>>}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_mini_max_algo_aec85d3d05d9cb566593c08ebd4cb423b}{minimax}}(\mbox{\hyperlink{class_checkers_board}{CheckersBoard}}\&\ board,\ \textcolor{keywordtype}{int}\ depth,\ \textcolor{keywordtype}{bool}\ isMaximizing,\ \textcolor{keywordtype}{int}\ alpha\ =\ -\/9999,\ \textcolor{keywordtype}{int}\ beta\ =\ 9999);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \ \ \ \ std::tuple<int,\ int,\ int>\ \mbox{\hyperlink{class_mini_max_algo_acc6373b08b3b1458b291fa2d433d5d58}{getBestTimedMove}}(\mbox{\hyperlink{class_checkers_board}{CheckersBoard}}\&\ board,\ \textcolor{keywordtype}{int}\ timeLimitMillis);}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MINIMAXALGO\_H}}
+
+\end{DoxyCode}

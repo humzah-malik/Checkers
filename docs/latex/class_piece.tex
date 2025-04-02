@@ -1,0 +1,202 @@
+\doxysection{Piece Class Reference}
+\hypertarget{class_piece}{}\label{class_piece}\index{Piece@{Piece}}
+
+
+Represents a single piece on the checkers board.  
+
+
+
+
+{\ttfamily \#include $<$piece.\+h$>$}
+
+Inheritance diagram for Piece\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_piece}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_piece_aac6b3856e95da0731edf827c8decab13}{Piece}} (\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} color, bool \mbox{\hyperlink{class_piece_ad19703167abadf45a7ef46e5d6a11b93}{is\+King}}, int row, int col, QGraphics\+Item \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor that creates a piece with color, status, and position. Automatically assigns a unique ID. \end{DoxyCompactList}\item 
+\Hypertarget{class_piece_a28039e50fc1ee702312717cba9d9378b}\label{class_piece_a28039e50fc1ee702312717cba9d9378b} 
+\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} {\bfseries get\+Color} () const
+\begin{DoxyCompactList}\small\item\em Gets the color of the piece. \end{DoxyCompactList}\item 
+\Hypertarget{class_piece_ad19703167abadf45a7ef46e5d6a11b93}\label{class_piece_ad19703167abadf45a7ef46e5d6a11b93} 
+bool {\bfseries is\+King} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the piece is a king. \end{DoxyCompactList}\item 
+\Hypertarget{class_piece_a0f53bbca2552fb2f6ea5307d9b4734fe}\label{class_piece_a0f53bbca2552fb2f6ea5307d9b4734fe} 
+int {\bfseries get\+Row} () const
+\begin{DoxyCompactList}\small\item\em Gets the row on the board. \end{DoxyCompactList}\item 
+\Hypertarget{class_piece_a1c8b8d9e1fb77ea0d40ce42c7912317b}\label{class_piece_a1c8b8d9e1fb77ea0d40ce42c7912317b} 
+int {\bfseries get\+Col} () const
+\begin{DoxyCompactList}\small\item\em Gets the column on the board. \end{DoxyCompactList}\item 
+\Hypertarget{class_piece_ad67133f2d7563df69a0912c47ae0cc6f}\label{class_piece_ad67133f2d7563df69a0912c47ae0cc6f} 
+int {\bfseries get\+Id} () const
+\begin{DoxyCompactList}\small\item\em Gets the unique piece ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_piece_a04d4fd15e74ac9b57485524ec9253bfd}{set\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Sets the piece\textquotesingle{}s unique ID (used when cloning). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_piece_a3421bc27d9789e3a2dd8b0461758f18c}{set\+Board\+Position}} (int row, int col)
+\begin{DoxyCompactList}\small\item\em Sets the board position (row and column). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_piece_a28a90679d1ca07d07b575f9946f18096}{promote\+To\+King}} ()
+\begin{DoxyCompactList}\small\item\em Promotes this piece to a king. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_piece_af13540da199772949c016056534c43ca}{demote\+From\+King}} ()
+\begin{DoxyCompactList}\small\item\em Reverts king to regular piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_piece_a6a95876f3f9a38dd99ab5e25da9bb07f}{mouse\+Press\+Event}} (QGraphics\+Scene\+Mouse\+Event \texorpdfstring{$\ast$}{*}event) override
+\begin{DoxyCompactList}\small\item\em Handles mouse clicks on the piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_piece_afa28d3ace86540a6b682ad0d904d8314}{update\+Pixmap}} ()
+\begin{DoxyCompactList}\small\item\em Updates the piece icon (used after promotion or demotion). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_piece_a757a577b6dfb06c6558021b828ca7c1d}\label{class_piece_a757a577b6dfb06c6558021b828ca7c1d} 
+\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} {\bfseries m\+\_\+color}
+\item 
+\Hypertarget{class_piece_aa14d83681380ad96fea9479b2b353f16}\label{class_piece_aa14d83681380ad96fea9479b2b353f16} 
+bool {\bfseries m\+\_\+is\+King}
+\item 
+\Hypertarget{class_piece_a0ebf225e7dee57781e026fc29a979a03}\label{class_piece_a0ebf225e7dee57781e026fc29a979a03} 
+int {\bfseries m\+\_\+row}
+\item 
+\Hypertarget{class_piece_a11fbd18210fc00b32285aa7737845789}\label{class_piece_a11fbd18210fc00b32285aa7737845789} 
+int {\bfseries m\+\_\+col}
+\item 
+\Hypertarget{class_piece_aeb1ff5762b0180d733af36e30c6164a1}\label{class_piece_aeb1ff5762b0180d733af36e30c6164a1} 
+int {\bfseries m\+\_\+id}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_piece_abd7196ecf37bf71bdc8d0b9a5074171c}\label{class_piece_abd7196ecf37bf71bdc8d0b9a5074171c} 
+static int {\bfseries next\+Id} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single piece on the checkers board. 
+
+Handles color, king status, position, and interaction. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_piece_aac6b3856e95da0731edf827c8decab13}\index{Piece@{Piece}!Piece@{Piece}}
+\index{Piece@{Piece}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{Piece()}{Piece()}}
+{\footnotesize\ttfamily \label{class_piece_aac6b3856e95da0731edf827c8decab13} 
+Piece\+::\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}}}]{color}{, }\item[{bool}]{is\+King}{, }\item[{int}]{row}{, }\item[{int}]{col}{, }\item[{QGraphics\+Item \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Constructor that creates a piece with color, status, and position. Automatically assigns a unique ID. 
+
+Constructs a \doxylink{class_piece}{Piece} with given color, king status, and board position. Assigns a unique ID and sets its visual representation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The piece\textquotesingle{}s color. \\
+\hline
+{\em is\+King} & Whether it\textquotesingle{}s a king. \\
+\hline
+{\em row} & Initial row. \\
+\hline
+{\em col} & Initial column. \\
+\hline
+{\em parent} & Optional graphics parent. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_piece_af13540da199772949c016056534c43ca}\index{Piece@{Piece}!demoteFromKing@{demoteFromKing}}
+\index{demoteFromKing@{demoteFromKing}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{demoteFromKing()}{demoteFromKing()}}
+{\footnotesize\ttfamily \label{class_piece_af13540da199772949c016056534c43ca} 
+void Piece\+::demote\+From\+King (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reverts king to regular piece. 
+
+Demotes a king back to a regular piece. \Hypertarget{class_piece_a6a95876f3f9a38dd99ab5e25da9bb07f}\index{Piece@{Piece}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{mousePressEvent()}{mousePressEvent()}}
+{\footnotesize\ttfamily \label{class_piece_a6a95876f3f9a38dd99ab5e25da9bb07f} 
+void Piece\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{QGraphics\+Scene\+Mouse\+Event \texorpdfstring{$\ast$}{*}}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Handles mouse clicks on the piece. 
+
+Handles mouse click on the piece for selection logic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The mouse event object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_piece_a28a90679d1ca07d07b575f9946f18096}\index{Piece@{Piece}!promoteToKing@{promoteToKing}}
+\index{promoteToKing@{promoteToKing}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{promoteToKing()}{promoteToKing()}}
+{\footnotesize\ttfamily \label{class_piece_a28a90679d1ca07d07b575f9946f18096} 
+void Piece\+::promote\+To\+King (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Promotes this piece to a king. 
+
+Promotes the piece to a king and updates icon. \Hypertarget{class_piece_a3421bc27d9789e3a2dd8b0461758f18c}\index{Piece@{Piece}!setBoardPosition@{setBoardPosition}}
+\index{setBoardPosition@{setBoardPosition}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{setBoardPosition()}{setBoardPosition()}}
+{\footnotesize\ttfamily \label{class_piece_a3421bc27d9789e3a2dd8b0461758f18c} 
+void Piece\+::set\+Board\+Position (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{col}{}\end{DoxyParamCaption})}
+
+
+
+Sets the board position (row and column). 
+
+Updates the board coordinates of the piece.
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The new row. \\
+\hline
+{\em col} & The new column. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_piece_a04d4fd15e74ac9b57485524ec9253bfd}\index{Piece@{Piece}!setId@{setId}}
+\index{setId@{setId}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily \label{class_piece_a04d4fd15e74ac9b57485524ec9253bfd} 
+void Piece\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the piece\textquotesingle{}s unique ID (used when cloning). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID to assign. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_piece_afa28d3ace86540a6b682ad0d904d8314}\index{Piece@{Piece}!updatePixmap@{updatePixmap}}
+\index{updatePixmap@{updatePixmap}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{updatePixmap()}{updatePixmap()}}
+{\footnotesize\ttfamily \label{class_piece_afa28d3ace86540a6b682ad0d904d8314} 
+void Piece\+::update\+Pixmap (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates the piece icon (used after promotion or demotion). 
+
+Updates the pixmap/icon of the piece based on color and king status. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{piece_8h}{piece.\+h}}\item 
+\mbox{\hyperlink{piece_8cpp}{piece.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\doxysection{piece.\+h}
+\hypertarget{piece_8h_source}{}\label{piece_8h_source}\mbox{\hyperlink{piece_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ PIECE\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ PIECE\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QGraphicsPixmapItem>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ Red,}
+\DoxyCodeLine{00024\ \ \ \ \ Black,}
+\DoxyCodeLine{00025\ \ \ \ \ Green,}
+\DoxyCodeLine{00026\ \ \ \ \ Yellow}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_piece_aac6b3856e95da0731edf827c8decab13}{Piece}}\ :\ \textcolor{keyword}{public}\ QObject,\ \textcolor{keyword}{public}\ QGraphicsPixmapItem}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ m\_color;\ \ \ \textcolor{comment}{//\ Piece's\ color/team}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isKing;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Whether\ this\ piece\ is\ a\ king}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_row;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Row\ on\ the\ board}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_col;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Column\ on\ the\ board}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_id;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Unique\ ID\ for\ this\ piece}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ nextId;\ \ \ \ \textcolor{comment}{//\ Static\ counter\ for\ assigning\ unique\ IDs}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_piece_aac6b3856e95da0731edf827c8decab13}{Piece}}(\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ color,\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_piece_ad19703167abadf45a7ef46e5d6a11b93}{isKing}},\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ QGraphicsItem\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ \mbox{\hyperlink{class_piece_a28039e50fc1ee702312717cba9d9378b}{getColor}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_color;\ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_piece_ad19703167abadf45a7ef46e5d6a11b93}{isKing}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_isKing;\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_piece_a0f53bbca2552fb2f6ea5307d9b4734fe}{getRow}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_row;\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_piece_a1c8b8d9e1fb77ea0d40ce42c7912317b}{getCol}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_col;\ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_piece_ad67133f2d7563df69a0912c47ae0cc6f}{getId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_id;\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_a04d4fd15e74ac9b57485524ec9253bfd}{setId}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ \{\ m\_id\ =\ id;\ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_a3421bc27d9789e3a2dd8b0461758f18c}{setBoardPosition}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_a28a90679d1ca07d07b575f9946f18096}{promoteToKing}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_af13540da199772949c016056534c43ca}{demoteFromKing}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_afa28d3ace86540a6b682ad0d904d8314}{updatePixmap}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_a6a95876f3f9a38dd99ab5e25da9bb07f}{mousePressEvent}}(QGraphicsSceneMouseEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00109\ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

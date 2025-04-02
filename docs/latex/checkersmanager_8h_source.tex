@@ -1,0 +1,60 @@
+\doxysection{checkersmanager.\+h}
+\hypertarget{checkersmanager_8h_source}{}\label{checkersmanager_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ CHECKERSMANAGER\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ CHECKERSMANAGER\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{checkersboard_8h}{checkersboard.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_a_i_8h}{AI.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_checkers_manager_a24aef9e3bff5d40daea4758f4864c0ab}{CheckersManager}}\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_checkers_board}{CheckersBoard}}\ *board;\ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ main\ game\ board}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}\ *player1;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ First\ player\ (usually\ human)}}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}\ *player2;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Second\ player\ (can\ be\ AI\ or\ human)}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_a_i}{AI}}\ *aiPlayer;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ AI\ logic\ handler\ (used\ in\ PvAI\ mode)}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ gameOver\ =\ \textcolor{keyword}{false};\ \ \ \textcolor{comment}{//\ Tracks\ whether\ the\ game\ has\ ended}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ For\ PvAI\ mode:\ assume\ human\ is\ always\ Black}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ userUndosLeft\ =\ 2;\ \ \ \textcolor{comment}{//\ Undo\ count\ for\ the\ user\ in\ PvAI\ mode}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_checkers_manager_a24aef9e3bff5d40daea4758f4864c0ab}{CheckersManager}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_manager_afc8c86ab3df93b23d8ac2fc85a237b2f}{setBoard}}(\mbox{\hyperlink{class_checkers_board}{CheckersBoard}}\ *board);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_checkers_manager_aa172301276b087bd3bf9418635ba8a16}{redUndosLeft}}\ =\ 2;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_checkers_manager_a308860d7ea6b3ad27da06e65e5bcfe5f}{blackUndosLeft}}\ =\ 2;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ signals:}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_manager_ada936d5aea1829bb5a2de79669203d26}{undoCountsUpdated}}(\textcolor{keywordtype}{int}\ redLeft,\ \textcolor{keywordtype}{int}\ blackLeft);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_manager_a4ae58025936ec9282fb87922959bb819}{userUndoCountUpdated}}(\textcolor{keywordtype}{int}\ remaining);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_manager_a99516b6e2a1ff7194399e40f79b554b2}{onStart}}(}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numPlayers,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&difficulty,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ showHints,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ soundEffectEnabled,}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ aiEnabled}
+\DoxyCodeLine{00092\ \ \ \ \ );}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_manager_a6bb641936b5acc284be2a86b7f111f85}{makeAIMove}}();}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_manager_a9702bd3abc25f131ac1f5296987b23b9}{checkWinCondition}}();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_manager_a74a18f50e31b464d1f2ad7fe9f8d3dfa}{undoMove}}();}
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CHECKERSMANAGER\_H}}
+
+\end{DoxyCode}

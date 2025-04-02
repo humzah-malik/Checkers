@@ -1,0 +1,25 @@
+var class_main_window =
+[
+    [ "GameEntry", "struct_main_window_1_1_game_entry.html", null ],
+    [ "MainWindow", "class_main_window.html#a996c5a2b6f77944776856f08ec30858d", null ],
+    [ "initializeSoundEffects", "class_main_window.html#a720487ef44846ef6b16974f1ab61d5eb", null ],
+    [ "onBackToFrontPage", "class_main_window.html#aef3ef652bc233146331ad5bef3f3cbb2", null ],
+    [ "onBackToGameMenu", "class_main_window.html#a4d69f198c08931b23317adfb40b7c92a", null ],
+    [ "onExitApp", "class_main_window.html#aab6ca9db2cbb0e8ed2d45db3fc5641f5", null ],
+    [ "onStartGame", "class_main_window.html#a3677607a35200e535b6cde1f2cfe2e23", null ],
+    [ "openSettingsDialog", "class_main_window.html#aae6fca90e8369aa6745e9ad6c66e25e0", null ],
+    [ "playGameEndSound", "class_main_window.html#a43bf59ae8075ca2b91ac048c1779bc8c", null ],
+    [ "playKingPromotionSound", "class_main_window.html#a815c5efbe1b6c0b0659347cd0230da4d", null ],
+    [ "playPieceCaptureSound", "class_main_window.html#af5027ada7729fadafcd2c8be89937fc5", null ],
+    [ "playPieceMoveSound", "class_main_window.html#a5f22edf61a3c54bfc94c8f4cbf9fdd27", null ],
+    [ "playSelectSound", "class_main_window.html#a561d7653a2d8774384580a37fca2a75f", null ],
+    [ "playTurnChangeSound", "class_main_window.html#a94550427a0abacaa3e030103565e39d4", null ],
+    [ "registerGames", "class_main_window.html#a5130858e22c0d23207c3c51eabc5a9f7", null ],
+    [ "showCheckersMenu", "class_main_window.html#a00959caaeb848df7b5cecbe77fa620ec", null ],
+    [ "showGameDescriptionPage", "class_main_window.html#ad423bcd522a8c55a61ee3aa91a603d58", null ],
+    [ "showInstructionsPage", "class_main_window.html#ac20c62334153203fd1d6fe56909ac078", null ],
+    [ "showPvAIPage", "class_main_window.html#a26566a567aa351741ffc26db4b01522d", null ],
+    [ "showPvPPage", "class_main_window.html#a568015636fcab9f35f3d0482e91562ce", null ],
+    [ "toggleMusic", "class_main_window.html#a207ce6f610f2082affa69f96bc17eec6", null ],
+    [ "toggleSoundEffects", "class_main_window.html#a2e213f512dd5f31a1f1832b892afecdc", null ]
+];

@@ -1,0 +1,160 @@
+\doxysection{Mini\+Max\+Algo Class Reference}
+\hypertarget{class_mini_max_algo}{}\label{class_mini_max_algo}\index{MiniMaxAlgo@{MiniMaxAlgo}}
+
+
+Implements the Minimax Algorithm with Alpha-\/\+Beta Pruning for \doxylink{class_a_i}{AI} decision-\/making.  
+
+
+
+
+{\ttfamily \#include $<$Mini\+Max\+Algo.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mini_max_algo_a02215585b96ea4eba1e4925713787bee}{Mini\+Max\+Algo}} (int depth)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_mini_max_algo}{Mini\+Max\+Algo}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_mini_max_algo_a48fe1661c6caaa39d397c45dccd27824}{evaluate\+Board}} (\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \&board)
+\begin{DoxyCompactList}\small\item\em Evaluates the board state. \end{DoxyCompactList}\item 
+std\+::pair$<$ int, std\+::tuple$<$ int, int, int $>$ $>$ \mbox{\hyperlink{class_mini_max_algo_aec85d3d05d9cb566593c08ebd4cb423b}{minimax}} (\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \&board, int depth, bool is\+Maximizing, int alpha=-\/9999, int beta=9999)
+\begin{DoxyCompactList}\small\item\em Executes the Minimax algorithm with Alpha-\/\+Beta Pruning. \end{DoxyCompactList}\item 
+std\+::tuple$<$ int, int, int $>$ \mbox{\hyperlink{class_mini_max_algo_acc6373b08b3b1458b291fa2d433d5d58}{get\+Best\+Timed\+Move}} (\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \&board, int time\+Limit\+Millis)
+\begin{DoxyCompactList}\small\item\em Gets the best move within a given time limit using iterative deepening. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mini_max_algo_af44d108a57699f2f2c574fdb438badad}\label{class_mini_max_algo_af44d108a57699f2f2c574fdb438badad} 
+int {\bfseries max\+Depth}
+\begin{DoxyCompactList}\small\item\em Maximum search depth for Minimax. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the Minimax Algorithm with Alpha-\/\+Beta Pruning for \doxylink{class_a_i}{AI} decision-\/making. 
+
+This class evaluates board states and selects optimal moves for the \doxylink{class_a_i}{AI}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mini_max_algo_a02215585b96ea4eba1e4925713787bee}\index{MiniMaxAlgo@{MiniMaxAlgo}!MiniMaxAlgo@{MiniMaxAlgo}}
+\index{MiniMaxAlgo@{MiniMaxAlgo}!MiniMaxAlgo@{MiniMaxAlgo}}
+\doxysubsubsection{\texorpdfstring{MiniMaxAlgo()}{MiniMaxAlgo()}}
+{\footnotesize\ttfamily \label{class_mini_max_algo_a02215585b96ea4eba1e4925713787bee} 
+Mini\+Max\+Algo\+::\+Mini\+Max\+Algo (\begin{DoxyParamCaption}\item[{int}]{depth}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_mini_max_algo}{Mini\+Max\+Algo}. 
+
+Constructor that sets max search depth.
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth} & The maximum depth for Minimax recursion.\\
+\hline
+{\em depth} & Max depth for minimax search. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mini_max_algo_a48fe1661c6caaa39d397c45dccd27824}\index{MiniMaxAlgo@{MiniMaxAlgo}!evaluateBoard@{evaluateBoard}}
+\index{evaluateBoard@{evaluateBoard}!MiniMaxAlgo@{MiniMaxAlgo}}
+\doxysubsubsection{\texorpdfstring{evaluateBoard()}{evaluateBoard()}}
+{\footnotesize\ttfamily \label{class_mini_max_algo_a48fe1661c6caaa39d397c45dccd27824} 
+int Mini\+Max\+Algo\+::evaluate\+Board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \&}]{board}{}\end{DoxyParamCaption})}
+
+
+
+Evaluates the board state. 
+
+Evaluates current board state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Board to evaluate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Score for \doxylink{class_a_i}{AI} (Red positive, Black negative). 
+\end{DoxyReturn}
+\Hypertarget{class_mini_max_algo_acc6373b08b3b1458b291fa2d433d5d58}\index{MiniMaxAlgo@{MiniMaxAlgo}!getBestTimedMove@{getBestTimedMove}}
+\index{getBestTimedMove@{getBestTimedMove}!MiniMaxAlgo@{MiniMaxAlgo}}
+\doxysubsubsection{\texorpdfstring{getBestTimedMove()}{getBestTimedMove()}}
+{\footnotesize\ttfamily \label{class_mini_max_algo_acc6373b08b3b1458b291fa2d433d5d58} 
+std\+::tuple$<$ int, int, int $>$ Mini\+Max\+Algo\+::get\+Best\+Timed\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \&}]{board}{, }\item[{int}]{time\+Limit\+Millis}{}\end{DoxyParamCaption})}
+
+
+
+Gets the best move within a given time limit using iterative deepening. 
+
+Iterative deepening Minimax with time limit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current game board. \\
+\hline
+{\em time\+Limit\+Millis} & The time limit in milliseconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The best move as a tuple\+: (piece\+Id, target\+Row, target\+Col).
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Game board. \\
+\hline
+{\em time\+Limit\+Millis} & Time cap in milliseconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Best move found (piece\+Id, row, col). 
+\end{DoxyReturn}
+\Hypertarget{class_mini_max_algo_aec85d3d05d9cb566593c08ebd4cb423b}\index{MiniMaxAlgo@{MiniMaxAlgo}!minimax@{minimax}}
+\index{minimax@{minimax}!MiniMaxAlgo@{MiniMaxAlgo}}
+\doxysubsubsection{\texorpdfstring{minimax()}{minimax()}}
+{\footnotesize\ttfamily \label{class_mini_max_algo_aec85d3d05d9cb566593c08ebd4cb423b} 
+std\+::pair$<$ int, std\+::tuple$<$ int, int, int $>$ $>$ Mini\+Max\+Algo\+::minimax (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_checkers_board}{Checkers\+Board}} \&}]{board}{, }\item[{int}]{depth}{, }\item[{bool}]{is\+Maximizing}{, }\item[{int}]{alpha}{ = {\ttfamily -\/9999}, }\item[{int}]{beta}{ = {\ttfamily 9999}}\end{DoxyParamCaption})}
+
+
+
+Executes the Minimax algorithm with Alpha-\/\+Beta Pruning. 
+
+Minimax algorithm with alpha-\/beta pruning.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current game board. \\
+\hline
+{\em depth} & The current depth of recursion. \\
+\hline
+{\em is\+Maximizing} & True if maximizing \doxylink{class_a_i}{AI}\textquotesingle{}s advantage, false if minimizing. \\
+\hline
+{\em alpha} & The alpha value for pruning. \\
+\hline
+{\em beta} & The beta value for pruning. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing the best score and the best move as a tuple\+: (piece\+Id, target\+Row, target\+Col).
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Current game board. \\
+\hline
+{\em depth} & Recursion depth. \\
+\hline
+{\em is\+Maximizing} & True if \doxylink{class_a_i}{AI}\textquotesingle{}s turn. \\
+\hline
+{\em alpha} & Alpha value for pruning. \\
+\hline
+{\em beta} & Beta value for pruning. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair of best score and best move (piece\+Id, row, col). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_mini_max_algo_8h}{Mini\+Max\+Algo.\+h}}\item 
+\mbox{\hyperlink{_mini_max_algo_8cpp}{Mini\+Max\+Algo.\+cpp}}\end{DoxyCompactItemize}

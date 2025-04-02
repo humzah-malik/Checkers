@@ -1,0 +1,74 @@
+\doxysection{Instructions\+Page Class Reference}
+\hypertarget{class_instructions_page}{}\label{class_instructions_page}\index{InstructionsPage@{InstructionsPage}}
+
+
+Displays the rules, controls, and guidance for playing the Checkers game.  
+
+
+
+
+{\ttfamily \#include $<$instructionspage.\+h$>$}
+
+Inheritance diagram for Instructions\+Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_instructions_page}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_instructions_page_a1e9e891cc26ca7eb3f05939f87fe6410}\label{class_instructions_page_a1e9e891cc26ca7eb3f05939f87fe6410} 
+void {\bfseries back\+To\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the user clicks the back arrow to return to the menu. \end{DoxyCompactList}\item 
+\Hypertarget{class_instructions_page_a4f14accd51a5a07a4b00b0b02656b7d4}\label{class_instructions_page_a4f14accd51a5a07a4b00b0b02656b7d4} 
+void {\bfseries settings\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em (Optional) Emitted when the user wants to access settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_instructions_page_ae56b2c00e6c156e26802fb2a99f54dc2}{Instructions\+Page}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{class_instructions_page}{Instructions\+Page} UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_instructions_page_a8772cb1f4bf2644bc9dc4a6c12f92d9b}\label{class_instructions_page_a8772cb1f4bf2644bc9dc4a6c12f92d9b} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries title\+Label}
+\item 
+\Hypertarget{class_instructions_page_a578e679caae779a615edeb2692d919b9}\label{class_instructions_page_a578e679caae779a615edeb2692d919b9} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries instructions\+Label}
+\item 
+\Hypertarget{class_instructions_page_a5185b9017f2eaf70837968c2795440f0}\label{class_instructions_page_a5185b9017f2eaf70837968c2795440f0} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries back\+Button}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Displays the rules, controls, and guidance for playing the Checkers game. 
+
+This page provides a scrollable section explaining gameplay rules, king mechanics, undo system, controls, and win conditions. Includes a back button for navigation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_instructions_page_ae56b2c00e6c156e26802fb2a99f54dc2}\index{InstructionsPage@{InstructionsPage}!InstructionsPage@{InstructionsPage}}
+\index{InstructionsPage@{InstructionsPage}!InstructionsPage@{InstructionsPage}}
+\doxysubsubsection{\texorpdfstring{InstructionsPage()}{InstructionsPage()}}
+{\footnotesize\ttfamily \label{class_instructions_page_ae56b2c00e6c156e26802fb2a99f54dc2} 
+Instructions\+Page\+::\+Instructions\+Page (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs the \doxylink{class_instructions_page}{Instructions\+Page} UI. 
+
+Constructs the instructions screen with title, scrollable content, and a back button.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Optional parent widget. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{instructionspage_8h}{instructionspage.\+h}}\item 
+\mbox{\hyperlink{instructionspage_8cpp}{instructionspage.\+cpp}}\end{DoxyCompactItemize}

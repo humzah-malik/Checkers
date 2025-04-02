@@ -1,0 +1,86 @@
+\doxysection{Front\+Page Class Reference}
+\hypertarget{class_front_page}{}\label{class_front_page}\index{FrontPage@{FrontPage}}
+
+
+Represents the main entry UI screen with a title and Start button.  
+
+
+
+
+{\ttfamily \#include $<$frontpage.\+h$>$}
+
+Inheritance diagram for Front\+Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_front_page}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_front_page_a22668603f5471361a5c67d3885611384}\label{class_front_page_a22668603f5471361a5c67d3885611384} 
+void {\bfseries checkers\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the Checkers "{}\+Start"{} button is clicked. \end{DoxyCompactList}\item 
+\Hypertarget{class_front_page_a4532082857b81e2043c75052520b448a}\label{class_front_page_a4532082857b81e2043c75052520b448a} 
+void {\bfseries exit\+App\+Requested} ()
+\begin{DoxyCompactList}\small\item\em Emitted when user requests to quit the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_front_page_a5d5d27d2ec0eb603f8fad7f52fc7da78}{Front\+Page}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_front_page}{Front\+Page} UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_front_page_a8e55a4da502fdba220bae1adb9e77f24}\label{class_front_page_a8e55a4da502fdba220bae1adb9e77f24} 
+QVBox\+Layout \texorpdfstring{$\ast$}{*} {\bfseries layout}
+\begin{DoxyCompactList}\small\item\em Main vertical layout. \end{DoxyCompactList}\item 
+\Hypertarget{class_front_page_a7ab45060ad9e705d8e4e38a9a767b26f}\label{class_front_page_a7ab45060ad9e705d8e4e38a9a767b26f} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries logo}
+\begin{DoxyCompactList}\small\item\em Logo label displaying the game title. \end{DoxyCompactList}\item 
+\Hypertarget{class_front_page_a6043f8a8cc8bdba92013aff9bfc211ca}\label{class_front_page_a6043f8a8cc8bdba92013aff9bfc211ca} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries checkers\+Button}
+\begin{DoxyCompactList}\small\item\em Button to start the Checkers game. \end{DoxyCompactList}\item 
+\Hypertarget{class_front_page_aaa364276f4e64d82d7141c3eae306bb4}\label{class_front_page_aaa364276f4e64d82d7141c3eae306bb4} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries game2\+Btn}
+\begin{DoxyCompactList}\small\item\em Placeholder for a second game (currently unused) \end{DoxyCompactList}\item 
+\Hypertarget{class_front_page_a1ee52c4dbf9d0e7e7dcbb49adce117ca}\label{class_front_page_a1ee52c4dbf9d0e7e7dcbb49adce117ca} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries game3\+Btn}
+\begin{DoxyCompactList}\small\item\em Placeholder for a third game (currently unused) \end{DoxyCompactList}\item 
+\Hypertarget{class_front_page_a2db153f61e29e0acc5157af59b8cbd51}\label{class_front_page_a2db153f61e29e0acc5157af59b8cbd51} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries game4\+Btn}
+\begin{DoxyCompactList}\small\item\em Placeholder for a fourth game (currently unused) \end{DoxyCompactList}\item 
+\Hypertarget{class_front_page_a3cbf7082edefdba68445389670d6c4e9}\label{class_front_page_a3cbf7082edefdba68445389670d6c4e9} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries exit\+Button}
+\begin{DoxyCompactList}\small\item\em Exit button (currently commented out) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the main entry UI screen with a title and Start button. 
+
+This class displays the Checkers title and a retro-\/styled Start button. Emits signals when the Start button is clicked or when the user wants to exit. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_front_page_a5d5d27d2ec0eb603f8fad7f52fc7da78}\index{FrontPage@{FrontPage}!FrontPage@{FrontPage}}
+\index{FrontPage@{FrontPage}!FrontPage@{FrontPage}}
+\doxysubsubsection{\texorpdfstring{FrontPage()}{FrontPage()}}
+{\footnotesize\ttfamily \label{class_front_page_a5d5d27d2ec0eb603f8fad7f52fc7da78} 
+Front\+Page\+::\+Front\+Page (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for \doxylink{class_front_page}{Front\+Page} UI. 
+
+Constructs the front page UI with title and Start button.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Optional parent QWidget.\\
+\hline
+\end{DoxyParams}
+Applies retro styles, sets up layout, and connects signals. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{frontpage_8h}{frontpage.\+h}}\item 
+\mbox{\hyperlink{frontpage_8cpp}{frontpage.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,158 @@
+\doxysection{Pv\+AIPage Class Reference}
+\hypertarget{class_pv_a_i_page}{}\label{class_pv_a_i_page}\index{PvAIPage@{PvAIPage}}
+
+
+UI page for selecting \doxylink{class_player}{Player} vs \doxylink{class_a_i}{AI} game settings.  
+
+
+
+
+{\ttfamily \#include $<$pvaipage.\+h$>$}
+
+Inheritance diagram for Pv\+AIPage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pv_a_i_page}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_pv_a_i_page_ac39b927f0b25e30f74e87fcc0e0947a4}\label{class_pv_a_i_page_ac39b927f0b25e30f74e87fcc0e0947a4} 
+void {\bfseries back\+To\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Emitted when user clicks Back button to return to menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pv_a_i_page_a3ea3432af11a04e026bb34797b99a2da}{start\+Pv\+AIGame}} (const QString \&difficulty, bool show\+Hints, bool sound\+Enabled)
+\begin{DoxyCompactList}\small\item\em Emitted when user starts the game with selected settings. \end{DoxyCompactList}\item 
+\Hypertarget{class_pv_a_i_page_afa344b20489b75ada59d96c9fc19fd4a}\label{class_pv_a_i_page_afa344b20489b75ada59d96c9fc19fd4a} 
+void {\bfseries settings\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the user opens the settings dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pv_a_i_page_ada725e6a9b969d260ca489219b4a4ecd}{Pv\+AIPage}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs the Pv\+AI settings page. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pv_a_i_page_af8eaf4bd452393320d2eb54689e9daec}{on\+Start\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em Handles when the Start button is clicked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pv_a_i_page_a3ffd9f7cc15f68c7639aea9b86c005e0}{on\+Decrease\+Difficulty}} ()
+\begin{DoxyCompactList}\small\item\em Lowers the difficulty level when "{}-\/"{} is clicked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pv_a_i_page_aded0b036ac9ccd26265a80381d76c0a5}{on\+Increase\+Difficulty}} ()
+\begin{DoxyCompactList}\small\item\em Raises the difficulty level when "{}+"{} is clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_pv_a_i_page_ac1630229cab5be2f506f290ef07b33c4}\label{class_pv_a_i_page_ac1630229cab5be2f506f290ef07b33c4} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries title\+Label}
+\item 
+\Hypertarget{class_pv_a_i_page_a02faab3a063eba7045b5bd1c2e695269}\label{class_pv_a_i_page_a02faab3a063eba7045b5bd1c2e695269} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries difficulty\+Label}
+\item 
+\Hypertarget{class_pv_a_i_page_af85b761fc0173cec717351d0eddc9c7e}\label{class_pv_a_i_page_af85b761fc0173cec717351d0eddc9c7e} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries decrease\+Button}
+\item 
+\Hypertarget{class_pv_a_i_page_a37562228032077b3df13eb888c6c5672}\label{class_pv_a_i_page_a37562228032077b3df13eb888c6c5672} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries increase\+Button}
+\item 
+\Hypertarget{class_pv_a_i_page_a19531f3bb191719c4027d35d732fcb0c}\label{class_pv_a_i_page_a19531f3bb191719c4027d35d732fcb0c} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries start\+Button}
+\item 
+\Hypertarget{class_pv_a_i_page_a509f43fe32cbaaebc7a2f1bc4a9f0f18}\label{class_pv_a_i_page_a509f43fe32cbaaebc7a2f1bc4a9f0f18} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries back\+Button}
+\item 
+\Hypertarget{class_pv_a_i_page_ab357afa710a0396d13f5fe08bdef7635}\label{class_pv_a_i_page_ab357afa710a0396d13f5fe08bdef7635} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries exit\+Button}
+\item 
+\Hypertarget{class_pv_a_i_page_aa04f441afa32c07c04a557d9bc86f933}\label{class_pv_a_i_page_aa04f441afa32c07c04a557d9bc86f933} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries settings\+Button}
+\item 
+\Hypertarget{class_pv_a_i_page_a8b187790e574315633e0c76077cff688}\label{class_pv_a_i_page_a8b187790e574315633e0c76077cff688} 
+QString\+List {\bfseries difficulties}
+\item 
+\Hypertarget{class_pv_a_i_page_aadfcba809990c7cd221aefaeda25b7b8}\label{class_pv_a_i_page_aadfcba809990c7cd221aefaeda25b7b8} 
+int {\bfseries difficulty\+Index}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+UI page for selecting \doxylink{class_player}{Player} vs \doxylink{class_a_i}{AI} game settings. 
+
+Allows user to pick difficulty, toggle options, and start the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pv_a_i_page_ada725e6a9b969d260ca489219b4a4ecd}\index{PvAIPage@{PvAIPage}!PvAIPage@{PvAIPage}}
+\index{PvAIPage@{PvAIPage}!PvAIPage@{PvAIPage}}
+\doxysubsubsection{\texorpdfstring{PvAIPage()}{PvAIPage()}}
+{\footnotesize\ttfamily \label{class_pv_a_i_page_ada725e6a9b969d260ca489219b4a4ecd} 
+Pv\+AIPage\+::\+Pv\+AIPage (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs the Pv\+AI settings page. 
+
+Constructor for \doxylink{class_pv_a_i_page}{Pv\+AIPage}. Initializes UI elements and connects signals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pv_a_i_page_a3ffd9f7cc15f68c7639aea9b86c005e0}\index{PvAIPage@{PvAIPage}!onDecreaseDifficulty@{onDecreaseDifficulty}}
+\index{onDecreaseDifficulty@{onDecreaseDifficulty}!PvAIPage@{PvAIPage}}
+\doxysubsubsection{\texorpdfstring{onDecreaseDifficulty}{onDecreaseDifficulty}}
+{\footnotesize\ttfamily \label{class_pv_a_i_page_a3ffd9f7cc15f68c7639aea9b86c005e0} 
+void Pv\+AIPage\+::on\+Decrease\+Difficulty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Lowers the difficulty level when "{}-\/"{} is clicked. 
+
+Decreases the difficulty index and updates label. \Hypertarget{class_pv_a_i_page_aded0b036ac9ccd26265a80381d76c0a5}\index{PvAIPage@{PvAIPage}!onIncreaseDifficulty@{onIncreaseDifficulty}}
+\index{onIncreaseDifficulty@{onIncreaseDifficulty}!PvAIPage@{PvAIPage}}
+\doxysubsubsection{\texorpdfstring{onIncreaseDifficulty}{onIncreaseDifficulty}}
+{\footnotesize\ttfamily \label{class_pv_a_i_page_aded0b036ac9ccd26265a80381d76c0a5} 
+void Pv\+AIPage\+::on\+Increase\+Difficulty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Raises the difficulty level when "{}+"{} is clicked. 
+
+Increases the difficulty index and updates label. \Hypertarget{class_pv_a_i_page_af8eaf4bd452393320d2eb54689e9daec}\index{PvAIPage@{PvAIPage}!onStartClicked@{onStartClicked}}
+\index{onStartClicked@{onStartClicked}!PvAIPage@{PvAIPage}}
+\doxysubsubsection{\texorpdfstring{onStartClicked}{onStartClicked}}
+{\footnotesize\ttfamily \label{class_pv_a_i_page_af8eaf4bd452393320d2eb54689e9daec} 
+void Pv\+AIPage\+::on\+Start\+Clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Handles when the Start button is clicked. 
+
+Emits start signal with selected settings. \Hypertarget{class_pv_a_i_page_a3ea3432af11a04e026bb34797b99a2da}\index{PvAIPage@{PvAIPage}!startPvAIGame@{startPvAIGame}}
+\index{startPvAIGame@{startPvAIGame}!PvAIPage@{PvAIPage}}
+\doxysubsubsection{\texorpdfstring{startPvAIGame}{startPvAIGame}}
+{\footnotesize\ttfamily \label{class_pv_a_i_page_a3ea3432af11a04e026bb34797b99a2da} 
+void Pv\+AIPage\+::start\+Pv\+AIGame (\begin{DoxyParamCaption}\item[{const QString \&}]{difficulty}{, }\item[{bool}]{show\+Hints}{, }\item[{bool}]{sound\+Enabled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when user starts the game with selected settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em difficulty} & Difficulty level as a string (e.\+g., "{}\+Easy"{}). \\
+\hline
+{\em show\+Hints} & True if hints should be shown. \\
+\hline
+{\em sound\+Enabled} & True if sound is enabled. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{pvaipage_8h}{pvaipage.\+h}}\item 
+\mbox{\hyperlink{pvaipage_8cpp}{pvaipage.\+cpp}}\end{DoxyCompactItemize}

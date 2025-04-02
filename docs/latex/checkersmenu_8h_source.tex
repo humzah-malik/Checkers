@@ -1,0 +1,81 @@
+\doxysection{checkersmenu.\+h}
+\hypertarget{checkersmenu_8h_source}{}\label{checkersmenu_8h_source}\mbox{\hyperlink{checkersmenu_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ CHECKERSMENU\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ CHECKERSMENU\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QCheckBox>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QRadioButton>}\ \ \textcolor{comment}{//\ Used\ for\ game\ mode\ selection}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}npcontainerwidget.h"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_checkers_menu_a001b05ac922d058da0ae32d5b66eb5ae}{CheckersMenu}}\ :\ \textcolor{keyword}{public}\ QWidget\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_checkers_menu_a001b05ac922d058da0ae32d5b66eb5ae}{CheckersMenu}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ QLabel\ *titleLabel;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Main\ title\ label}}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_np_container_widget}{NpContainerWidget}}\ *nPlayersContainer;\ \ \ \ \ \ \textcolor{comment}{//\ Widget\ for\ selecting\ number\ of\ players}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ QLabel\ *optionsLabel;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Label\ for\ the\ "{}Options"{}\ section}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ QLabel\ *difficultyTitleLabel,\ *difficultyLabel;\ \textcolor{comment}{//\ Labels\ for\ difficulty\ setting}}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_arrow_button}{ArrowButton}}\ *addDifficulty,\ *minusDifficulty;\ \ \ \textcolor{comment}{//\ Buttons\ to\ increase/decrease\ difficulty}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ QCheckBox\ *showHintsCheckBox;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Toggle\ to\ enable\ hint\ highlighting}}
+\DoxyCodeLine{00045\ \ \ \ \ QCheckBox\ *soundEffectCheckBox;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Toggle\ to\ enable\ sound\ effects}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ QPushButton\ *startButton;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Starts\ the\ game}}
+\DoxyCodeLine{00048\ \ \ \ \ QPushButton\ *backButton;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Navigates\ back\ to\ main/front\ page}}
+\DoxyCodeLine{00049\ \ \ \ \ QPushButton\ *exitButton;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Exits\ the\ application}}
+\DoxyCodeLine{00050\ \ \ \ \ QPushButton\ *settingsButton;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Opens\ the\ settings\ panel\ (if\ implemented)}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ difficultyIndex;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Current\ index\ in\ difficulty\ list}}
+\DoxyCodeLine{00053\ \ \ \ \ QStringList\ difficulties;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ List\ of\ difficulty\ levels}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ QRadioButton\ *pvpMode;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Game\ mode:\ Player\ vs\ Player}}
+\DoxyCodeLine{00056\ \ \ \ \ QRadioButton\ *pvaiMode;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Game\ mode:\ Player\ vs\ AI}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ isAIEnabled\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flag\ indicating\ whether\ AI\ mode\ is\ selected}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_a0b53faf0a3dff331ea59a09fbf550072}{setupUI}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_a7ff906e4fbfef8fda2380f575f033357}{updateDifficultyLabel}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ signals:}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_aff4ff59c93ca5e83d06305e2b86cc4b7}{startGameSignaled}}(}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numPlayers,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&difficulty,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ showHintsIsEnabled,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ soundEffectIsEnabled,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ aiEnabled}
+\DoxyCodeLine{00085\ \ \ \ \ );}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_a2d92048ff1c18f832d6dd1c13116fbc7}{backToFrontPage}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_aad1917bde1ded3739450b5d25bbc0c60}{exitAppRequested}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_a68de3f1752ab35fbb9b1f2f08c207f94}{pvpSelected}}();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_a07d6e595c2ce361fd3501c9596b5cb7f}{pvaiSelected}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_a94da0a4fb43ed30ca4f9671fdc485cf8}{instructionsSelected}}();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_ac292ebc4c0b44bcba79ea9d0f66ae798}{settingsRequested}}();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_aeffbc03f3a2ffb8b1843843cc9fec378}{onStartClicked}}();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_a5c7b4a1ce3dadc3800b92117a9b09804}{minusDifficultySlot}}();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_af43b993acddcc66ac11f91aac11d6637}{addDifficultySlot}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_checkers_menu_a358321c67bc30cdd63107670147575a0}{updateGameMode}}();}
+\DoxyCodeLine{00137\ \};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CHECKERSMENU\_H}}
+
+\end{DoxyCode}

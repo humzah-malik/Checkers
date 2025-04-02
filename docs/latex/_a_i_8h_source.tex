@@ -1,0 +1,29 @@
+\doxysection{AI.\+h}
+\hypertarget{_a_i_8h_source}{}\label{_a_i_8h_source}\mbox{\hyperlink{_a_i_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ AI\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ AI\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mini_max_algo_8h}{MiniMaxAlgo.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_i_a5f34d1a74b85618da2e1473ba376cb94}{AI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_player_a6b23b3cb0791de218a7c639f2f7eca30}{Player}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_a_i_aefc885bc04b521d7c84b81a3377a470f}{difficulty}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_mini_max_algo}{MiniMaxAlgo}}\ \mbox{\hyperlink{class_a_i_a939c2490964f00f0739012e3ecc3b809}{minimaxAlgo}};\ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_a_i_a5f34d1a74b85618da2e1473ba376cb94}{AI}}(\textcolor{keywordtype}{int}\ aiDifficulty,\ std::vector<Piece*>\ aiPieces);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_a_i_a5f34d1a74b85618da2e1473ba376cb94}{AI}}(\textcolor{keywordtype}{int}\ aiDifficulty,\ QList<Piece*>\ aiPieces);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00057\ \ \ \ \ std::pair<Piece*,\ std::pair<int,\ int>>\ \mbox{\hyperlink{class_a_i_a5558ad2b6788e0000787571d5bd4a98e}{getBestMove}}(\mbox{\hyperlink{class_checkers_board}{CheckersBoard}}\&\ board);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00068\ \ \ \ \ std::pair<Piece*,\ std::pair<int,\ int>>\ \mbox{\hyperlink{class_a_i_accecb96e294a2701e12d8c0ed1fb0b2b}{getRandomMove}}(\mbox{\hyperlink{class_checkers_board}{CheckersBoard}}\&\ board);}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

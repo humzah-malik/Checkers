@@ -1,0 +1,66 @@
+\doxysection{gamepage.\+h}
+\hypertarget{gamepage_8h_source}{}\label{gamepage_8h_source}\mbox{\hyperlink{gamepage_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ GAMEPAGE\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ GAMEPAGE\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QHBoxLayout>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{arrowbutton_8h}{arrowbutton.h}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{piece_8h}{piece.h}}"{}}\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ PieceColor\ enum}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{checkersboard_8h}{checkersboard.h}}"{}}\ \textcolor{comment}{//\ For\ game\ logic}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_page_aa1eb008b302d758a8a2c74739887f800}{GamePage}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_game_page_aa1eb008b302d758a8a2c74739887f800}{GamePage}}(QWidget\ *gameWidget,\ \textcolor{keyword}{const}\ QString\ \&gameTitle,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ signals:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Emitted\ when\ the\ user\ clicks\ the\ "{}Back"{}\ button.}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ backToMenu();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Emitted\ when\ the\ user\ clicks\ the\ "{}Exit"{}\ button.}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ exitApp();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ Emitted\ when\ the\ user\ clicks\ the\ "{}Undo"{}\ button.}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ requestUndo();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ Emitted\ when\ the\ user\ clicks\ the\ "{}Settings"{}\ button.}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ settingsClicked();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Emitted\ when\ the\ user\ chooses\ to\ replay\ the\ game\ after\ game\ over.}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ playAgainRequested();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Handles\ undo\ button\ logic\ and\ emits\ requestUndo().}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_page_ad37a37da3cf97708d82ca7ad60087494}{onUndoClicked}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ Updates\ both\ undo\ labels\ (for\ PvP\ mode).}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_page_a0997e5b4c0b62cddec9f7aacc7bf8171}{updateUndoLabels}}(\textcolor{keywordtype}{int}\ redLeft,\ \textcolor{keywordtype}{int}\ blackLeft);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Updates\ user\ undo\ label\ (for\ PvAI\ mode).}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_page_a494e0e346462c301b923ec8a82b3ab9c}{updateUserUndoLabel}}(\textcolor{keywordtype}{int}\ remaining);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ Updates\ the\ turn\ indicator\ text\ and\ color.}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_page_a1ed19cad74e35f883bb180d7f7dcf34a}{updateTurnIndicator}}(\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ newTurn);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ Displays\ the\ game-\/over\ dialog\ with\ winner\ message\ and\ options.}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_page_aef04280507c9e3fb4c8b538162de34d2}{showGameOverDialog}}(\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{PieceColor}}\ winner);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00076\ \ \ \ \ QPushButton\ *backButton,\ *exitButton,\ *undoButton;\ \textcolor{comment}{//\ Control\ buttons}}
+\DoxyCodeLine{00077\ \ \ \ \ QLabel\ *redUndosLabel;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Red\ player's\ undo\ label}}
+\DoxyCodeLine{00078\ \ \ \ \ QLabel\ *blackUndosLabel;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Black\ player's\ undo\ label}}
+\DoxyCodeLine{00079\ \ \ \ \ QLabel\ *turnIndicatorLabel;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Displays\ current\ player's\ turn}}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

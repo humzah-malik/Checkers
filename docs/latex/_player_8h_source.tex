@@ -1,0 +1,33 @@
+\doxysection{Player.\+h}
+\hypertarget{_player_8h_source}{}\label{_player_8h_source}\mbox{\hyperlink{_player_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ PLAYER\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ PLAYER\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{checkersboard_8h}{checkersboard.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{piece_8h}{piece.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_a6b23b3cb0791de218a7c639f2f7eca30}{Player}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00028\ \ \ \ \ std::string\ \mbox{\hyperlink{class_player_af9c920fabaafdeb7961a645315b521ff}{name}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ QList<Piece*>\ \mbox{\hyperlink{class_player_a303498245b4eaa618c520dff60f5a251}{pieces}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_player_a6b23b3cb0791de218a7c639f2f7eca30}{Player}}(\textcolor{keyword}{const}\ std::string\&\ playerName,\ QList<Piece*>\ playerPieces);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{\string~Player}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_player_a7585711bae8ed16cb7b0f99c02244ff1}{makeMove}}(\mbox{\hyperlink{class_checkers_board}{CheckersBoard}}\&\ board,\ \mbox{\hyperlink{class_piece}{Piece}}*\ piece,\ std::pair<int,\ int>\ toPosition);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ std::string\ \mbox{\hyperlink{class_player_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{const}\ QList<Piece*>\&\ \mbox{\hyperlink{class_player_a397baed60c051c0135e053cac2398acc}{getPieces}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLAYER\_H}}
+
+\end{DoxyCode}

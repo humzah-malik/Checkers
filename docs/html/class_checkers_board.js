@@ -1,0 +1,27 @@
+var class_checkers_board =
+[
+    [ "checkwin", "class_checkers_board.html#aaba87df1f98369aefdb70e1294d89a03", null ],
+    [ "clearHighlightedSquares", "class_checkers_board.html#ae2ca0dc32c50536b44f2ae230d1f4dac", null ],
+    [ "clone", "class_checkers_board.html#ac42b8820a916d420b0cab893e791f95b", null ],
+    [ "forceTurn", "class_checkers_board.html#a7d8e91ab88ce0a28da059a669112388a", null ],
+    [ "getAIPieces", "class_checkers_board.html#afc0f7653d7b8b9acf1d3c1fd1334ad82", null ],
+    [ "getCurrentTurn", "class_checkers_board.html#a0ade97688fc6fa02a6edfc5fc51bd254", null ],
+    [ "getOpponentPieces", "class_checkers_board.html#a7a371e8f3dcba30ea2797c2eda2fe83c", null ],
+    [ "getPieceAt", "class_checkers_board.html#aac730652c2d06adb1eb8a72f1512e322", null ],
+    [ "getPieceById", "class_checkers_board.html#a96b3bfed1c5eea4de80593f855f0dc6c", null ],
+    [ "getPieces", "class_checkers_board.html#a725794e16d160d4e453b35dc2559458e", null ],
+    [ "getSelectedPiece", "class_checkers_board.html#a2e7347a58fdce9a9c33441b563239f19", null ],
+    [ "handleMove", "class_checkers_board.html#acff4610d3be5a35080d0f5eede4b59bc", null ],
+    [ "hasValidMoves", "class_checkers_board.html#a71bde7360f5157d6f4423a9f020f16f4", null ],
+    [ "highlightValidMoves", "class_checkers_board.html#a3729576350fc75f7252c687e293e645d", null ],
+    [ "initializeBoard", "class_checkers_board.html#a4b79041621c85b394d70cbe307079cd6", null ],
+    [ "initializePieces", "class_checkers_board.html#a9619c18c616c658359ebd63dad7bef76", null ],
+    [ "isAnyCaptureAvailable", "class_checkers_board.html#ab38a322fc04b5f780f6ac11cb06b6b3c", null ],
+    [ "isCaptureAvailable", "class_checkers_board.html#a1da164397c0957ece0a0a9b1834d69b1", null ],
+    [ "isCaptureMove", "class_checkers_board.html#aecbe69bac40bf90b8b48b5dec81aef40", null ],
+    [ "isPiecesTurn", "class_checkers_board.html#a0f68ab2f8a3c556f2c3a332b45fa6e74", null ],
+    [ "isValidMove", "class_checkers_board.html#a622c16486cad2252794901317ffea0cf", null ],
+    [ "setSelectedPiece", "class_checkers_board.html#af160f97a34cc2010eda3af8e0f97da4f", null ],
+    [ "switchTurn", "class_checkers_board.html#a328e3100f9c7bab7e8c4dbe817648e31", null ],
+    [ "undoLastMove", "class_checkers_board.html#a8df962c4cb76a2544ebfad5960ef9e1b", null ]
+];

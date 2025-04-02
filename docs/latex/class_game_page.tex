@@ -1,0 +1,114 @@
+\doxysection{Game\+Page Class Reference}
+\hypertarget{class_game_page}{}\label{class_game_page}\index{GamePage@{GamePage}}
+
+
+Main UI container for a Checkers game session.  
+
+
+
+
+{\ttfamily \#include $<$gamepage.\+h$>$}
+
+Inheritance diagram for Game\+Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_page}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_page_ad37a37da3cf97708d82ca7ad60087494}\label{class_game_page_ad37a37da3cf97708d82ca7ad60087494} 
+void {\bfseries on\+Undo\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Handles Undo button click. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_page_a0997e5b4c0b62cddec9f7aacc7bf8171}\label{class_game_page_a0997e5b4c0b62cddec9f7aacc7bf8171} 
+void {\bfseries update\+Undo\+Labels} (int red\+Left, int black\+Left)
+\begin{DoxyCompactList}\small\item\em Updates both players\textquotesingle{} undo labels (PvP). \end{DoxyCompactList}\item 
+\Hypertarget{class_game_page_a494e0e346462c301b923ec8a82b3ab9c}\label{class_game_page_a494e0e346462c301b923ec8a82b3ab9c} 
+void {\bfseries update\+User\+Undo\+Label} (int remaining)
+\begin{DoxyCompactList}\small\item\em Updates undo label for Pv\+AI mode and hides red\textquotesingle{}s label. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_page_a1ed19cad74e35f883bb180d7f7dcf34a}\label{class_game_page_a1ed19cad74e35f883bb180d7f7dcf34a} 
+void {\bfseries update\+Turn\+Indicator} (\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} new\+Turn)
+\begin{DoxyCompactList}\small\item\em Updates the displayed turn indicator based on player color. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_page_aef04280507c9e3fb4c8b538162de34d2}\label{class_game_page_aef04280507c9e3fb4c8b538162de34d2} 
+void {\bfseries show\+Game\+Over\+Dialog} (\mbox{\hyperlink{piece_8h_ad7595c48bb74c0dd2a7648712a2d4985}{Piece\+Color}} winner)
+\begin{DoxyCompactList}\small\item\em Displays a dialog announcing the game winner with options to restart or return to menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_page_adf4d0da4e1306e1964f039c1c49cd412}\label{class_game_page_adf4d0da4e1306e1964f039c1c49cd412} 
+void {\bfseries back\+To\+Menu} ()
+\item 
+\Hypertarget{class_game_page_a6a0be424dcfa66a659e5fa945613b042}\label{class_game_page_a6a0be424dcfa66a659e5fa945613b042} 
+void {\bfseries exit\+App} ()
+\item 
+\Hypertarget{class_game_page_ad59b5e52cace0beb42db9c882f7f7423}\label{class_game_page_ad59b5e52cace0beb42db9c882f7f7423} 
+void {\bfseries request\+Undo} ()
+\item 
+\Hypertarget{class_game_page_ae904b6b2be46c971bad122738f034b25}\label{class_game_page_ae904b6b2be46c971bad122738f034b25} 
+void {\bfseries settings\+Clicked} ()
+\item 
+\Hypertarget{class_game_page_ae822cf4413b88dd5f44bccb08bcdf646}\label{class_game_page_ae822cf4413b88dd5f44bccb08bcdf646} 
+void {\bfseries play\+Again\+Requested} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_page_aa1eb008b302d758a8a2c74739887f800}{Game\+Page}} (QWidget \texorpdfstring{$\ast$}{*}game\+Widget, const QString \&game\+Title, QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{class_game_page}{Game\+Page} layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_page_af6220e226caf95dff44514ef427a9bae}\label{class_game_page_af6220e226caf95dff44514ef427a9bae} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries back\+Button}
+\item 
+\Hypertarget{class_game_page_a1a5f2b9bd75329639dc66c50ba8a4dc6}\label{class_game_page_a1a5f2b9bd75329639dc66c50ba8a4dc6} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries exit\+Button}
+\item 
+\Hypertarget{class_game_page_ad5b2446e8da0d9bbc9ebd8fadec24d89}\label{class_game_page_ad5b2446e8da0d9bbc9ebd8fadec24d89} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries undo\+Button}
+\item 
+\Hypertarget{class_game_page_a7e6fd60ff70aeddd45a18f7440474a05}\label{class_game_page_a7e6fd60ff70aeddd45a18f7440474a05} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries red\+Undos\+Label}
+\item 
+\Hypertarget{class_game_page_a04c7c58900a6549dff81a7ffa750ae41}\label{class_game_page_a04c7c58900a6549dff81a7ffa750ae41} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries black\+Undos\+Label}
+\item 
+\Hypertarget{class_game_page_aad47bb54fba1eaab69274e355f057d12}\label{class_game_page_aad47bb54fba1eaab69274e355f057d12} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries turn\+Indicator\+Label}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main UI container for a Checkers game session. 
+
+Displays the game board, turn indicator, undo counts, and control buttons. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_page_aa1eb008b302d758a8a2c74739887f800}\index{GamePage@{GamePage}!GamePage@{GamePage}}
+\index{GamePage@{GamePage}!GamePage@{GamePage}}
+\doxysubsubsection{\texorpdfstring{GamePage()}{GamePage()}}
+{\footnotesize\ttfamily \label{class_game_page_aa1eb008b302d758a8a2c74739887f800} 
+Game\+Page\+::\+Game\+Page (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{game\+Widget}{, }\item[{const QString \&}]{game\+Title}{, }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs the \doxylink{class_game_page}{Game\+Page} layout. 
+
+Constructs the \doxylink{class_game_page}{Game\+Page}, setting up layout and connecting signals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Widget} & The game board widget. \\
+\hline
+{\em game\+Title} & The title of the current game mode. \\
+\hline
+{\em parent} & Optional parent widget. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gamepage_8h}{gamepage.\+h}}\item 
+\mbox{\hyperlink{gamepage_8cpp}{gamepage.\+cpp}}\end{DoxyCompactItemize}

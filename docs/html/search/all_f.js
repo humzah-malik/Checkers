@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['setboard_0',['setBoard',['../class_checkers_manager.html#afc8c86ab3df93b23d8ac2fc85a237b2f',1,'CheckersManager']]],
+  ['setboardposition_1',['setBoardPosition',['../class_piece.html#a3421bc27d9789e3a2dd8b0461758f18c',1,'Piece']]],
+  ['setid_2',['setId',['../class_piece.html#a04d4fd15e74ac9b57485524ec9253bfd',1,'Piece']]],
+  ['setselectedpiece_3',['setSelectedPiece',['../class_checkers_board.html#af160f97a34cc2010eda3af8e0f97da4f',1,'CheckersBoard']]],
+  ['settingsclicked_4',['settingsClicked',['../class_instructions_page.html#a4f14accd51a5a07a4b00b0b02656b7d4',1,'InstructionsPage::settingsClicked()'],['../class_pv_a_i_page.html#afa344b20489b75ada59d96c9fc19fd4a',1,'PvAIPage::settingsClicked()'],['../class_pv_p_page.html#a20860a5367efc998ac5f2d6ed545c2d3',1,'PvPPage::settingsClicked()']]],
+  ['settingsdialog_5',['SettingsDialog',['../class_settings_dialog.html',1,'SettingsDialog'],['../class_settings_dialog.html#a65f665b4f4a5eefac7388206addc4c25',1,'SettingsDialog::SettingsDialog()']]],
+  ['settingsdialog_2ecpp_6',['settingsdialog.cpp',['../settingsdialog_8cpp.html',1,'']]],
+  ['settingsdialog_2eh_7',['settingsdialog.h',['../settingsdialog_8h.html',1,'']]],
+  ['settingsrequested_8',['settingsRequested',['../class_checkers_menu.html#ac292ebc4c0b44bcba79ea9d0f66ae798',1,'CheckersMenu']]],
+  ['setupui_9',['setupUI',['../class_checkers_menu.html#a0b53faf0a3dff331ea59a09fbf550072',1,'CheckersMenu']]],
+  ['showcheckersmenu_10',['showCheckersMenu',['../class_main_window.html#a00959caaeb848df7b5cecbe77fa620ec',1,'MainWindow']]],
+  ['showgamedescriptionpage_11',['showGameDescriptionPage',['../class_main_window.html#ad423bcd522a8c55a61ee3aa91a603d58',1,'MainWindow']]],
+  ['showgameoverdialog_12',['showGameOverDialog',['../class_game_page.html#aef04280507c9e3fb4c8b538162de34d2',1,'GamePage']]],
+  ['showinstructionspage_13',['showInstructionsPage',['../class_main_window.html#ac20c62334153203fd1d6fe56909ac078',1,'MainWindow']]],
+  ['showpvaipage_14',['showPvAIPage',['../class_main_window.html#a26566a567aa351741ffc26db4b01522d',1,'MainWindow']]],
+  ['showpvppage_15',['showPvPPage',['../class_main_window.html#a568015636fcab9f35f3d0482e91562ce',1,'MainWindow']]],
+  ['soundeffectstoggled_16',['soundEffectsToggled',['../class_settings_dialog.html#a89d1d1c04b6d21cdbaed3f489ad133a9',1,'SettingsDialog']]],
+  ['startgamesignaled_17',['startGameSignaled',['../class_checkers_menu.html#aff4ff59c93ca5e83d06305e2b86cc4b7',1,'CheckersMenu']]],
+  ['startpvaigame_18',['startPvAIGame',['../class_pv_a_i_page.html#a3ea3432af11a04e026bb34797b99a2da',1,'PvAIPage']]],
+  ['startpvpgame_19',['startPvPGame',['../class_pv_p_page.html#a2811d45bca96a9b7cbd465304ebc69aa',1,'PvPPage']]],
+  ['stylehelpers_2eh_20',['stylehelpers.h',['../stylehelpers_8h.html',1,'']]],
+  ['switchturn_21',['switchTurn',['../class_checkers_board.html#a328e3100f9c7bab7e8c4dbe817648e31',1,'CheckersBoard']]]
+];
