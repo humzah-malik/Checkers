@@ -1,4 +1,4 @@
-# ♟️ Checkers Game — CS3307 Final Project
+# Checkers Game — CS3307 Final Project
 
 A retro-themed Checkers game written in C++ using the Qt framework. It features a slick UI, two-player and AI modes, custom undo logic, and sound effects.
 
