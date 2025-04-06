@@ -49,12 +49,16 @@ make
 #### Run
 ./Checkers.app/Contents/MacOS/Checkers
 
+---
+
 ### Windows
 #### Build
 qmake checkers.pro
 mingw32-make
 #### Run
 Checkers.exe
+
+---
 
 ### Documentation
 To generate the code documentation using Doxygen:
