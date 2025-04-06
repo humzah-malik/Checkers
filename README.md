@@ -4,7 +4,7 @@ A retro-themed Checkers game written in C++ using the Qt framework. It features 
 
 ---
 
-## 📘 Project Info
+## Project Info
 
 - **Course**: CS3307 — Object-Oriented Design and Analysis
 - **University**: Western University
